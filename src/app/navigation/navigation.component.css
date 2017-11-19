@@ -12,14 +12,14 @@ h1 {
   padding: 20px 0;
 }
 .wrapper {
-  background: #041E36;
+  background: #d1ecf1;
   margin-bottom: 30px;
 }
 .row > a {
   display: block;
-  background: #041E36;
-  color: #fff;
-  border-bottom: 1px solid #041E36;
+  background: #d1ecf1;
+  color: #000;
+  border-bottom: 1px solid #d1ecf1;
   padding: 10px 0;
   text-align: center;
   text-transform: capitalize;
@@ -30,7 +30,7 @@ h1 {
 
 .row > a:hover,
 .row > a.active {
-  color: #041E36;
+  color: #000;
   background: #fff;
 }
 
