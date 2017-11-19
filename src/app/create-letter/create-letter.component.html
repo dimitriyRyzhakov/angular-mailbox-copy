@@ -1,0 +1,49 @@
+<div class="container right-content">
+  <div class="row">
+    <div class="col-12">
+      <h1>Create Letter</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div *ngIf="letterSent">Letter was sent</div>
+    <form class="form-add-user" [formGroup]="addLetterForm" (keyup.enter)="sendLetter(addLetterForm)" (submit)="sendLetter(addLetterForm)" [ngClass]="{invalidForm: FormInvalid}">
+      <div class="name-wrapper">
+        <div class="form-group">
+
+
+              <input  type="text" placeholder="Email" formControlName="to" class="form-control" [(ngModel)]="query" (keyup)=filter()>
+
+            <div class="autocomplete" *ngIf="userEmailList.length">
+              <ul>
+                <li *ngFor="let item of userEmailList">
+                  <a (click)="selectFromAutocomplete(item.email)">{{item.email}}</a>
+                </li>
+              </ul>
+            </div>
+          <div class="error-mess"
+               *ngIf="!addLetterForm.controls.to.valid && !addLetterForm.controls.to.pristine">
+            {{"It is required"}}
+          </div>
+        </div>
+        <div class="form-group">
+          <input class="form-control" formControlName="subject" placeholder="subject">
+          <div class="error-mess"
+               *ngIf="!addLetterForm.controls.subject.valid && !addLetterForm.controls.subject.pristine">
+            {{"It is required"}}
+          </div>
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" formControlName="body" placeholder="body"></textarea>
+          <div class="error-mess"
+               *ngIf="!addLetterForm.controls.body.valid && !addLetterForm.controls.body.pristine">
+            {{"It is required"}}
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <button class="btn">Submit</button>
+      </div>
+    </form>
+
+  </div>
+</div>

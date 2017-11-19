@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+   <div class="col-12">
+     <h1 class="remove-sub" *ngIf="subject">The Letter was removed</h1>
+     <div class="title"><b>Email:</b> {{oneLetterShow.to}}</div>
+     <div class="body"><b>Subject:</b> {{oneLetterShow.subject}}</div>
+     <div class="body"><b>Body:</b> {{oneLetterShow.body}}</div>
+   </div>
+    <div class="remove btn" (click)="removeLetter(oneLetterShow._id)">Remove</div>
+  </div>
+</div>
+
+<div class="loaders" *ngIf="loader">
+  <div class="loader">Loading...</div>
+</div>

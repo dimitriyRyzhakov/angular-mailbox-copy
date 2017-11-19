@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div>
+        <img [src]="oneUser?.avatarUrl" alt="">
+          <div class="name">{{oneUser?.fullName}}</div>
+          <div class="description">{{oneUser?.email}}</div>
+          <div class="birthdate" *ngIf="oneUser.birthdate">{{oneUser?.birthdate | birthdate}}</div>
+        <button class="btn" (click)="removeUser(oneUser._id)">Remove</button>
+        <button class="btn" [routerLink]="['/users/rename-user/', oneUser._id]">Change Info</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="loaders" *ngIf="loader">
+  <div class="loader">Loading...</div>
+</div>
+

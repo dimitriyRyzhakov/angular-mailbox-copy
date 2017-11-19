@@ -1,0 +1,28 @@
+
+
+<div class="wrapper left-content">
+  <div class="container ">
+    <div class="row">
+      <div class="col-md-12 alert alert-info">
+        <div *ngFor="let user of users">
+          Users:  {{user.firstName}} {{user.lastName}}
+        </div>
+        <p><a class="btn" (click)="loginOut()">Logout</a></p>
+      </div>
+    </div>
+    <div class="row menu">
+      <a class="col-12" routerLink="/users/users-list" routerLinkActive="active">users</a>
+      <a class="col-12 active" routerLink="/box/inbox" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+true}">box</a>
+      <a class="col-12" routerLink="create-letter" routerLinkActive="active">Create letter</a>
+      <a class="col-12" routerLink="inbox" routerLinkActive="active">inbox</a>
+      <a class="col-12" routerLink="sent-letters" routerLinkActive="active">sent</a>
+      <a class="col-12" routerLink="draft-letters" routerLinkActive="active">draft</a>
+      <a class="col-12" routerLink="spam-letters" routerLinkActive="active">spam</a>
+    </div>
+
+  </div>
+</div>
+
+
+<router-outlet></router-outlet>

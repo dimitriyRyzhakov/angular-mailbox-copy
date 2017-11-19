@@ -1,0 +1,76 @@
+<div class="container">
+  <div class="row" *ngIf="renameDataUser">
+    <div class="col-12">
+      <form class="form-add-user" [formGroup]="addUserForm" (submit)="putRenameUser(addUserForm)"
+            [ngClass]="{invalidForm: FormInvalid}">
+        <div class="name-wrapper">
+          <div class="form-group">
+            <input class="form-control" formControlName="fullName" placeholder="First name">
+            <div class="error-mess"
+                 *ngIf="!addUserForm.controls.fullName.valid && !addUserForm.controls.fullName.pristine">
+              {{"To short"}}
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="date" formControlName="birthdate" placeholder="1991-03-22">
+          <div class="error-mess"
+               *ngIf="!addUserForm.controls.birthdate.valid && !addUserForm.controls.birthdate.pristine">
+            {{"It is required"}}
+          </div>
+        </div>
+        <div class="form-group">
+          <input class="form-control" formControlName="email" placeholder="Your email">
+          <div class="error-mess" *ngIf="!addUserForm.controls.email.valid && !addUserForm.controls.email.pristine">
+            {{"Email not valid"}}
+          </div>
+        </div>
+        <div class="form-group">
+          <button class="btn">Save</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <div class="row" *ngIf="!renameDataUser">
+    <div class="col-12">
+      <form class="form-add-user" [formGroup]="addUserForm" (submit)="addUser(addUserForm)"
+            [ngClass]="{invalidForm: FormInvalid}">
+        <div class="name-wrapper">
+          <div class="form-group">
+            <input class="form-control" formControlName="fullName" placeholder="First name">
+            <div class="error-mess"
+                 *ngIf="!addUserForm.controls.fullName.valid && !addUserForm.controls.fullName.pristine">
+              {{"To short"}}
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="date" formControlName="birthdate" placeholder="1991-03-22">
+          <div class="error-mess"
+               *ngIf="!addUserForm.controls.birthdate.valid && !addUserForm.controls.birthdate.pristine">
+            {{"It is required"}}
+          </div>
+        </div>
+        <div class="form-group">
+          <input class="form-control" formControlName="email" placeholder="Your email">
+
+          <div class="error-mess" *ngIf="!addUserForm.controls.email.valid && !addUserForm.controls.email.pristine">
+            {{"Email not valid"}}
+          </div>
+        </div>
+        <div class="form-group">
+          <button class="btn">Submit</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="loaders" *ngIf="loader">
+  <div class="loader">Loading...</div>
+</div>
+

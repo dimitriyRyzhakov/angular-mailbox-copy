@@ -1,0 +1,55 @@
+app-box {
+  display: flex;
+  padding-top: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+header {
+  background: black;
+  height: 100px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 32px;
+  text-align: center;
+  color: #fff;
+  padding: 20px 0;
+}
+.wrapper {
+  background: #d1ecf1;
+  margin-right: 50px;
+}
+
+.menu {
+  border: 1px solid #d1ecf1;
+  min-width: 300px;
+}
+.row > a {
+  display: block;
+  background: #d1ecf1;
+  color: #000;
+  border-bottom: 1px solid #d1ecf1;
+  padding: 10px 0;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 19px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.row > a:hover,
+.row > a.active {
+  color: #fff;
+  background: #000;
+  text-decoration: none;
+}
+
+body {
+  overflow-y: scroll;
+}
+
+.search-form{
+  padding: 0;
+  margin: 20px 0 0;
+}

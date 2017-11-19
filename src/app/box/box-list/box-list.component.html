@@ -1,0 +1,36 @@
+<div class="container right-content">
+  <div class="row">
+    <div class="col-12 search-form">
+      <div class="form-group">
+        <input class="form-control" type="text" placeholder="Search" [(ngModel)]="searchText"
+               (keyup)="showMessifArticleEmpty()"/>
+      </div>
+    </div>
+  </div>
+  <h1 class="remove-sub" *ngIf="subject">Letter was removed</h1>
+  <div class="row" *ngIf="urlResponse">
+    <div class="remove-letters btn" (click)="deleteLetter()">Remove Letter</div>
+    <div class="col-12" *ngFor="let article of urlResponse | search: searchText; let i = index"
+         #articleTitle>
+
+      <div class="title"
+      >
+        <input class="removeItem" #checked (change)="addLetterforRemove(article, $event)" type="checkbox">
+        <div class="inner-title" [routerLink]="[article._id]"
+             routerLinkActive="active">
+          <div>{{article.subject}}</div>
+          <div class="body">{{article.body}}</div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="loaders" *ngIf="loader">
+    <div class="loader">Loading...</div>
+  </div>
+
+</div>
+
+
+
