@@ -13,23 +13,23 @@ export class UsersService {
   }
 
   getUsers(): Observable<Iusers[]> {
-    return this._http.get('http://test-api.javascript.ru/v1/dimitriyryzhakov/users');
+    return this._http.get('https://test-api.javascript.ru/v1/dimitriyryzhakov/users');
   }
 
   getOneUser(_id): Observable<Iuser> {
-    return this._http.get('http://test-api.javascript.ru/v1/dimitriyryzhakov/users/' + _id);
+    return this._http.get('https://test-api.javascript.ru/v1/dimitriyryzhakov/users/' + _id);
   }
 
   postUsers(dataUrl): Observable<Iusers[]> {
-    return this._http.post('http://test-api.javascript.ru/v1/dimitriyryzhakov/', dataUrl);
+    return this._http.post('https://test-api.javascript.ru/v1/dimitriyryzhakov/', dataUrl);
   }
 
   renameUser(id, body): Observable<Iuser> {
-    return this._http.patch(`http://test-api.javascript.ru/v1/dimitriyryzhakov/users/${id}`, body);
+    return this._http.patch(`https://test-api.javascript.ru/v1/dimitriyryzhakov/users/${id}`, body);
   }
 
   removeUser(_id) {
-    return this._http.delete('http://test-api.javascript.ru/v1/dimitriyryzhakov/users/' +  _id + '?delay=2000',
+    return this._http.delete('https://test-api.javascript.ru/v1/dimitriyryzhakov/users/' +  _id + '?delay=2000',
         { responseType: 'text'});
   }
 

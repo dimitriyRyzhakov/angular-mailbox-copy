@@ -16,9 +16,9 @@ export class BoxComponent implements OnInit {
 
   constructor(private userService: UserLoginService,
               private authenticationService: AuthenticationService,
-              private router: Router,) {
+              private router: Router) {
   }
-
+ 
   ngOnInit() {
     // get users from secure api end point
     this.userService.getUsers()

@@ -73,14 +73,11 @@ export class CreateLetterComponent implements OnInit, OnChanges {
       this.AdduserEmail.push({
         email: form.controls.to.value,
         fullName: 'No name',
-        // birthdate: '2017-11-22T00:00:00.000Z'
       });
 
       this.wrapperdataUser = {
         users: this.AdduserEmail
       };
-
-      console.log(form.controls.to.value);
 
       this.postNewEmailUser(this.wrapperdataUser);
 
@@ -121,7 +118,7 @@ export class CreateLetterComponent implements OnInit, OnChanges {
     });
 
     this.addLetterForm = this.formBuilder.group({
-      to: [null, [Validators.email, Validators.required]],
+      to: [null, [Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$'), Validators.required]],
       subject: [null, [Validators.required]],
       body: [null, [Validators.required]],
       mailbox: [this.mongoObjectId()],

@@ -78,24 +78,23 @@ export class UserCreateComponent implements OnInit {
   }
 
   changeDateFormat(date) {
-    if(this.renameDataUser.birthdate) {
+    if (this.renameDataUser.birthdate) {
       const dateFormat = new Date(date);
       return dateFormat.getFullYear() + '-' + (dateFormat.getMonth() + 1) + '-' + dateFormat.getDate();
-    }else {
-      return date; 
+    } else {
+      return date;
     }
-
   }
 
   isEmpty(obj) {
-    for (let prop in obj) {
+    for (const prop in obj) {
       if (obj.hasOwnProperty(prop)) {
         this.userService.getOneUser(this.userId.id).subscribe(res => {
           this.renameDataUser = res;
           this.addUserForm = this.formBuilder.group({
             fullName: [this.renameDataUser.fullName, [Validators.minLength(2), Validators.required]],
-            email: [this.renameDataUser.email, [Validators.email, Validators.required]],
-            birthdate: [this.changeDateFormat(this.renameDataUser.birthdate)],
+            email: [this.renameDataUser.email, [Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$'), Validators.required]],
+            birthdate: [this.changeDateFormat(this.renameDataUser.birthdate), []],
           });
         });
       }
@@ -106,10 +105,11 @@ export class UserCreateComponent implements OnInit {
 
     this.isEmpty(this.userId);
 
+
     this.addUserForm = this.formBuilder.group({
       fullName: [null, [Validators.minLength(2), Validators.required]],
-      email: [null, [Validators.email, Validators.required]],
-      birthdate: [null, []],
+      email: [null, [Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$'), Validators.required]],
+      birthdate: [null, [Validators.required]]
     });
 
 
