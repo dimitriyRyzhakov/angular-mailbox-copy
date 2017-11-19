@@ -78,8 +78,13 @@ export class UserCreateComponent implements OnInit {
   }
 
   changeDateFormat(date) {
-    let dateFormat = new Date(date);
-    return dateFormat.getFullYear() + '-' + (dateFormat.getMonth() + 1) + '-' + dateFormat.getDate();
+    if(this.renameDataUser.birthdate) {
+      const dateFormat = new Date(date);
+      return dateFormat.getFullYear() + '-' + (dateFormat.getMonth() + 1) + '-' + dateFormat.getDate();
+    }else {
+      return date; 
+    }
+
   }
 
   isEmpty(obj) {
@@ -90,7 +95,7 @@ export class UserCreateComponent implements OnInit {
           this.addUserForm = this.formBuilder.group({
             fullName: [this.renameDataUser.fullName, [Validators.minLength(2), Validators.required]],
             email: [this.renameDataUser.email, [Validators.email, Validators.required]],
-            birthdate: [this.changeDateFormat(this.renameDataUser.birthdate), [Validators.required]],
+            birthdate: [this.changeDateFormat(this.renameDataUser.birthdate)],
           });
         });
       }
@@ -101,13 +106,10 @@ export class UserCreateComponent implements OnInit {
 
     this.isEmpty(this.userId);
 
-
-
-
     this.addUserForm = this.formBuilder.group({
       fullName: [null, [Validators.minLength(2), Validators.required]],
       email: [null, [Validators.email, Validators.required]],
-      birthdate: [null, [Validators.required]],
+      birthdate: [null, []],
     });
 
 
