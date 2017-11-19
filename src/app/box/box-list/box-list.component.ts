@@ -19,6 +19,7 @@ export class BoxListComponent implements OnInit, OnChanges {
   public urlResponse;
   public subject: boolean = false;
   public lettersIdlist: any = [];
+  public searchText;
 
   @ViewChild('articleTitle') articleTitle;
 
