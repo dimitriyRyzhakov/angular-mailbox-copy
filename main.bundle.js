@@ -666,6 +666,7 @@ module.exports = "<div class=\"container right-content\">\n  <div class=\"row\">
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_users_service__ = __webpack_require__("../../../../../src/app/services/users.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_letters_service__ = __webpack_require__("../../../../../src/app/services/letters.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__reactive_validators_email_validator__ = __webpack_require__("../../../../../src/app/reactive-validators/email-validator.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -675,6 +676,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -770,7 +772,7 @@ var CreateLetterComponent = (function () {
             _this.createUserList = userslist;
         });
         this.addLetterForm = this.formBuilder.group({
-            to: [null, [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["e" /* Validators */].pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$'), __WEBPACK_IMPORTED_MODULE_1__angular_forms__["e" /* Validators */].required]],
+            to: [null, [__WEBPACK_IMPORTED_MODULE_4__reactive_validators_email_validator__["a" /* emailValidator */], __WEBPACK_IMPORTED_MODULE_1__angular_forms__["e" /* Validators */].required]],
             subject: [null, [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["e" /* Validators */].required]],
             body: [null, [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["e" /* Validators */].required]],
             mailbox: [this.mongoObjectId()],
@@ -1067,6 +1069,22 @@ SearchPipe = __decorate([
 
 /***/ }),
 
+/***/ "../../../../../src/app/reactive-validators/email-validator.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return emailValidator; });
+var emailValidator = function (control) {
+    var EMAIL_REGEXP = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    if (!EMAIL_REGEXP.test(control.value)) {
+        return { emailValidator: { error: 'Not valid Email' } };
+    }
+    return null;
+};
+//# sourceMappingURL=email-validator.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/services/authentication.service.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1303,6 +1321,7 @@ module.exports = "<div class=\"container\">\n  <div class=\"row\" *ngIf=\"rename
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_users_service__ = __webpack_require__("../../../../../src/app/services/users.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__reactive_validators_email_validator__ = __webpack_require__("../../../../../src/app/reactive-validators/email-validator.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1312,6 +1331,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -1327,6 +1347,7 @@ var UserCreateComponent = (function () {
         this.FormInvalid = false;
         this.dataUser = [];
         this.loader = false;
+        this.EMAIL_REGEXP = '/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i';
         this.router.params.subscribe(function (params) { return _this.userId = params; });
     }
     UserCreateComponent.prototype.postUser = function () {
@@ -1390,7 +1411,7 @@ var UserCreateComponent = (function () {
                     _this.renameDataUser = res;
                     _this.addUserForm = _this.formBuilder.group({
                         fullName: [_this.renameDataUser.fullName, [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["e" /* Validators */].minLength(2), __WEBPACK_IMPORTED_MODULE_1__angular_forms__["e" /* Validators */].required]],
-                        email: [_this.renameDataUser.email, [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["e" /* Validators */].pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$'), __WEBPACK_IMPORTED_MODULE_1__angular_forms__["e" /* Validators */].required]],
+                        email: [_this.renameDataUser.email, [__WEBPACK_IMPORTED_MODULE_4__reactive_validators_email_validator__["a" /* emailValidator */], __WEBPACK_IMPORTED_MODULE_1__angular_forms__["e" /* Validators */].required]],
                         birthdate: [_this.changeDateFormat(_this.renameDataUser.birthdate), []],
                     });
                 });
@@ -1401,7 +1422,7 @@ var UserCreateComponent = (function () {
         this.isEmpty(this.userId);
         this.addUserForm = this.formBuilder.group({
             fullName: [null, [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["e" /* Validators */].minLength(2), __WEBPACK_IMPORTED_MODULE_1__angular_forms__["e" /* Validators */].required]],
-            email: [null, [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["e" /* Validators */].pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$'), __WEBPACK_IMPORTED_MODULE_1__angular_forms__["e" /* Validators */].required]],
+            email: [null, [__WEBPACK_IMPORTED_MODULE_4__reactive_validators_email_validator__["a" /* emailValidator */], __WEBPACK_IMPORTED_MODULE_1__angular_forms__["e" /* Validators */].required]],
             birthdate: [null, [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["e" /* Validators */].required]]
         });
     };
