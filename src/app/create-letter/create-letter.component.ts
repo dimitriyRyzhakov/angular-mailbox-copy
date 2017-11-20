@@ -2,6 +2,7 @@ import {Component, ElementRef, OnChanges, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {UsersService} from "../services/users.service";
 import {LettersService} from "../services/letters.service";
+import {emailValidator} from "../reactive-validators/email-validator";
 
 @Component({
   selector: 'app-create-letter',
@@ -118,7 +119,7 @@ export class CreateLetterComponent implements OnInit, OnChanges {
     });
 
     this.addLetterForm = this.formBuilder.group({
-      to: [null, [Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$'), Validators.required]],
+      to: [null, [emailValidator, Validators.required]],
       subject: [null, [Validators.required]],
       body: [null, [Validators.required]],
       mailbox: [this.mongoObjectId()],

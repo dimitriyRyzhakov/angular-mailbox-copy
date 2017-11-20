@@ -3,6 +3,7 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {UsersService} from "../../services/users.service";
 import {ActivatedRoute, Params} from "@angular/router";
 import {Router} from '@angular/router';
+import {emailValidator} from "../../reactive-validators/email-validator";
 
 @Component({
   selector: 'app-user-create',
@@ -18,6 +19,7 @@ export class UserCreateComponent implements OnInit {
   public loader: boolean = false;
   public wrapperdataUser;
   public userId;
+  public  EMAIL_REGEXP = '/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i';
 
   constructor(private userService: UsersService,
               private formBuilder: FormBuilder,
@@ -93,7 +95,7 @@ export class UserCreateComponent implements OnInit {
           this.renameDataUser = res;
           this.addUserForm = this.formBuilder.group({
             fullName: [this.renameDataUser.fullName, [Validators.minLength(2), Validators.required]],
-            email: [this.renameDataUser.email, [Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$'), Validators.required]],
+            email: [this.renameDataUser.email, [emailValidator, Validators.required]],
             birthdate: [this.changeDateFormat(this.renameDataUser.birthdate), []],
           });
         });
@@ -108,7 +110,7 @@ export class UserCreateComponent implements OnInit {
 
     this.addUserForm = this.formBuilder.group({
       fullName: [null, [Validators.minLength(2), Validators.required]],
-      email: [null, [Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$'), Validators.required]],
+      email: [null, [emailValidator, Validators.required]],
       birthdate: [null, [Validators.required]]
     });
 
