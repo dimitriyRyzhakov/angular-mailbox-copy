@@ -1255,7 +1255,7 @@ var UsersService = (function () {
         return this._http.patch("https://test-api.javascript.ru/v1/dimitriyryzhakov/users/" + id, body);
     };
     UsersService.prototype.removeUser = function (_id) {
-        return this._http.delete('https://test-api.javascript.ru/v1/dimitriyryzhakov/users/' + _id + '?delay=2000', { responseType: 'text' });
+        return this._http.delete('https://test-api.javascript.ru/v1/dimitriyryzhakov/users/' + _id, { responseType: 'text' });
     };
     return UsersService;
 }());
