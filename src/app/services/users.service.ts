@@ -29,7 +29,7 @@ export class UsersService {
   }
 
   removeUser(_id) {
-    return this._http.delete('https://test-api.javascript.ru/v1/dimitriyryzhakov/users/' +  _id + '?delay=2000',
+    return this._http.delete('https://test-api.javascript.ru/v1/dimitriyryzhakov/users/' +  _id,
         { responseType: 'text'});
   }
 
