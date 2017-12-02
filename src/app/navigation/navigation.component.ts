@@ -31,7 +31,7 @@ export class NavigationComponent implements OnInit {
   }
 
   redirect() {
-    this.router.navigate(['/box/inbox']);  
+    this.router.navigate(['/box/inbox']);
   }
 
   filterTitle(modal){
