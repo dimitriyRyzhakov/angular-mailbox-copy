@@ -350,7 +350,7 @@ BirthdatePipe = __decorate([
 /***/ "../../../../../src/app/box/box-list/box-list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-navigation (userSelected)=\"filterLetters($event)\"></app-navigation>\n<div class=\"container right-content\">\n  <div class=\"row\">\n    <div class=\"col-2\">\n      <app-navigate></app-navigate>\n    </div>\n    <div class=\"col-10\">\n      <button class=\"btn btn-control btn-delete\" (click)=\"deleteLetter()\">\n      </button>\n      <table class=\"table table-striped table-letters\">\n        <tbody>\n\n        <tr *ngFor=\"let article of urlResponse | search: searchText; let i = index\" #articleTitle>\n          <td><input class=\"removeItem\" #checked (change)=\"addLetterforRemove(article, $event)\" type=\"checkbox\"></td>\n          <td [routerLink]=\"[article._id]\"\n              routerLinkActive=\"active\"><span class=\"title\">{{article.subject}}</span> <span class=\"body\">{{article.body}}</span></td>\n\n        </tr>\n        <tr> <td colspan=\"2\" *ngIf=\"!urlResponse\">No messages matched your search</td></tr>\n        </tbody>\n      </table>\n    </div>\n  </div>\n</div>\n\n\n\n"
+module.exports = "<app-navigation (filterLetter)=\"filterLetters($event)\"></app-navigation>\n<div class=\"container right-content\">\n  <div class=\"row\">\n    <div class=\"col-2\">\n      <app-navigate></app-navigate>\n    </div>\n    <div class=\"col-10\">\n      <button class=\"btn btn-control btn-delete\" (click)=\"deleteLetter()\">\n      </button>\n      <table class=\"table table-striped table-letters\">\n        <tbody>\n\n        <tr *ngFor=\"let article of urlResponse | search: searchText; let i = index\" #articleTitle>\n          <td><input class=\"removeItem\" #checked (change)=\"addLetterforRemove(article, $event)\" type=\"checkbox\"></td>\n          <td [routerLink]=\"[article._id]\"\n              routerLinkActive=\"active\"><span class=\"title\">{{article.subject}}</span> <span class=\"body\">{{article.body}}</span></td>\n\n        </tr>\n        <tr> <td colspan=\"2\" *ngIf=\"!urlResponse\">No messages matched your search</td></tr>\n        </tbody>\n      </table>\n    </div>\n  </div>\n</div>\n\n\n\n"
 
 /***/ }),
 
@@ -1478,7 +1478,7 @@ var _a, _b, _c;
 /***/ "../../../../../src/app/navigation/navigation.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header id=\"header\">\n  <div class=\"container\">\n    <div class=\"row justify-content-between align-items-center\">\n      <div class=\"col-2 left-block\">\n        <button  [routerLink]=\"['/users/users-list']\" routerLinkActive=\"active\">Users</button>\n        <button  [routerLink]=\"['/box/inbox']\" routerLinkActive=\"active\">Box</button>\n\n      </div>\n      <div class=\"form-group col-7 search-block\">\n        <input class=\"form-control\" type=\"text\" placeholder=\"Search\" (keyup)=\"selectUser(searchText)\" [(ngModel)]=\"searchText\"/>\n        <button type=\"button\">Search</button>\n      </div>\n      <div class=\"col-3 user-info d-flex align-items-center justify-content-center\">\n        <div *ngFor=\"let user of users\">\n          {{user.firstName}} {{user.lastName}}\n        </div>\n        <div><a (click)=\"loginOut()\">Logout</a></div>\n      </div>\n    </div>\n  </div>\n</header>\n\n<router-outlet></router-outlet>\n"
+module.exports = "<header id=\"header\">\n  <div class=\"container\">\n    <div class=\"row justify-content-between align-items-center\">\n      <div class=\"col-2 left-block\">\n        <button  [routerLink]=\"['/users/users-list']\" routerLinkActive=\"active\">Users</button>\n        <button class=\"active-box\" (click)=\"redirect()\"  [routerLink]=\"['/box/']\" routerLinkActive=\"active\">Box</button>\n\n      </div>\n      <div class=\"form-group col-7 search-block\">\n        <input class=\"form-control\" type=\"text\" placeholder=\"Search\" (keyup)=\"filterTitle(searchText)\" [(ngModel)]=\"searchText\"/>\n        <button type=\"button\">Search</button>\n      </div>\n      <div class=\"col-3 user-info d-flex align-items-center justify-content-center\">\n        <div *ngFor=\"let user of users\">\n          {{user.firstName}} {{user.lastName}}\n        </div>\n        <div><a (click)=\"loginOut()\">Logout</a></div>\n      </div>\n    </div>\n  </div>\n</header>\n\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -1528,11 +1528,14 @@ var NavigationComponent = (function () {
         this.authenticationService = authenticationService;
         this.router = router;
         this.users = [];
-        this.userSelected = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
+        this.filterLetter = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
         this.elementRef = myElement;
     }
-    NavigationComponent.prototype.selectUser = function (modal) {
-        this.userSelected.emit(modal);
+    NavigationComponent.prototype.redirect = function () {
+        this.router.navigate(['/box/inbox']);
+    };
+    NavigationComponent.prototype.filterTitle = function (modal) {
+        this.filterLetter.emit(modal);
     };
     NavigationComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -1556,7 +1559,7 @@ __decorate([
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["T" /* Output */])(),
     __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]) === "function" && _b || Object)
-], NavigationComponent.prototype, "userSelected", void 0);
+], NavigationComponent.prototype, "filterLetter", void 0);
 NavigationComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'app-navigation',
