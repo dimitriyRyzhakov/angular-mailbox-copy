@@ -88,8 +88,8 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ngx_bootstrap_dropdown__ = __webpack_require__("../../../../ngx-bootstrap/dropdown/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__users_users_list_users_list_component__ = __webpack_require__("../../../../../src/app/users/users-list/users-list.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__users_users_list_user_user_component__ = __webpack_require__("../../../../../src/app/users/users-list/user/user.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__box_users_users_list_users_list_component__ = __webpack_require__("../../../../../src/app/box/users/users-list/users-list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__box_users_users_list_user_user_component__ = __webpack_require__("../../../../../src/app/box/users/users-list/user/user.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_users_service__ = __webpack_require__("../../../../../src/app/services/users.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_common_http__ = __webpack_require__("../../../common/@angular/common/http.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__birthdate_pipe__ = __webpack_require__("../../../../../src/app/birthdate.pipe.ts");
@@ -106,20 +106,26 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__validators_sex_validator_directive__ = __webpack_require__("../../../../../src/app/validators/sex-validator.directive.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__validators_birthdat_validator_directive__ = __webpack_require__("../../../../../src/app/validators/birthdat-validator.directive.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pipes_search_pipe__ = __webpack_require__("../../../../../src/app/pipes/search.pipe.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__create_letter_create_letter_component__ = __webpack_require__("../../../../../src/app/create-letter/create-letter.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__users_user_create_user_create_component__ = __webpack_require__("../../../../../src/app/users/user-create/user-create.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__users_users_component__ = __webpack_require__("../../../../../src/app/users/users.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__box_box_list_create_letter_create_letter_component__ = __webpack_require__("../../../../../src/app/box/box-list/create-letter/create-letter.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__box_users_user_create_user_create_component__ = __webpack_require__("../../../../../src/app/box/users/user-create/user-create.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__box_users_users_component__ = __webpack_require__("../../../../../src/app/box/users/users.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__guards_auth_guard__ = __webpack_require__("../../../../../src/app/guards/auth.guard.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__services_authentication_service__ = __webpack_require__("../../../../../src/app/services/authentication.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__services_userLogin_service__ = __webpack_require__("../../../../../src/app/services/userLogin.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__fake_backend_fake_backend__ = __webpack_require__("../../../../../src/app/fake-backend/fake-backend.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__angular_http_testing__ = __webpack_require__("../../../http/@angular/http/testing.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__box_navigate_navigate_component__ = __webpack_require__("../../../../../src/app/box/navigate/navigate.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__ng_bootstrap_ng_bootstrap__ = __webpack_require__("../../../../@ng-bootstrap/ng-bootstrap/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__box_user_navigate_user_navigate_component__ = __webpack_require__("../../../../../src/app/box/user-navigate/user-navigate.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
 
 
 
@@ -161,23 +167,23 @@ var appRoutes = [
     {
         path: 'users',
         canActivate: [__WEBPACK_IMPORTED_MODULE_26__guards_auth_guard__["a" /* AuthGuard */]],
-        component: __WEBPACK_IMPORTED_MODULE_25__users_users_component__["a" /* UsersComponent */],
+        component: __WEBPACK_IMPORTED_MODULE_25__box_users_users_component__["a" /* UsersComponent */],
         children: [
             {
                 path: 'users-list/:id',
-                component: __WEBPACK_IMPORTED_MODULE_6__users_users_list_user_user_component__["a" /* UserComponent */],
+                component: __WEBPACK_IMPORTED_MODULE_6__box_users_users_list_user_user_component__["a" /* UserComponent */],
             },
             {
                 path: 'create-user',
-                component: __WEBPACK_IMPORTED_MODULE_24__users_user_create_user_create_component__["a" /* UserCreateComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_24__box_users_user_create_user_create_component__["a" /* UserCreateComponent */]
             },
             {
                 path: 'rename-user/:id',
-                component: __WEBPACK_IMPORTED_MODULE_24__users_user_create_user_create_component__["a" /* UserCreateComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_24__box_users_user_create_user_create_component__["a" /* UserCreateComponent */]
             },
             {
                 path: 'users-list',
-                component: __WEBPACK_IMPORTED_MODULE_5__users_users_list_users_list_component__["a" /* UsersListComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_5__box_users_users_list_users_list_component__["a" /* UsersListComponent */]
             },
         ]
     },
@@ -195,7 +201,7 @@ var appRoutes = [
             },
             {
                 path: 'create-letter',
-                component: __WEBPACK_IMPORTED_MODULE_23__create_letter_create_letter_component__["a" /* CreateLetterComponent */],
+                component: __WEBPACK_IMPORTED_MODULE_23__box_box_list_create_letter_create_letter_component__["a" /* CreateLetterComponent */],
             },
             {
                 path: 'inbox',
@@ -258,8 +264,8 @@ AppModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["M" /* NgModule */])({
         declarations: [
             __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_5__users_users_list_users_list_component__["a" /* UsersListComponent */],
-            __WEBPACK_IMPORTED_MODULE_6__users_users_list_user_user_component__["a" /* UserComponent */],
+            __WEBPACK_IMPORTED_MODULE_5__box_users_users_list_users_list_component__["a" /* UsersListComponent */],
+            __WEBPACK_IMPORTED_MODULE_6__box_users_users_list_user_user_component__["a" /* UserComponent */],
             __WEBPACK_IMPORTED_MODULE_9__birthdate_pipe__["a" /* BirthdatePipe */],
             __WEBPACK_IMPORTED_MODULE_11__box_box_component__["a" /* BoxComponent */],
             __WEBPACK_IMPORTED_MODULE_12__login_login_component__["a" /* LoginComponent */],
@@ -271,9 +277,11 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_20__validators_sex_validator_directive__["a" /* SexValidatorDirective */],
             __WEBPACK_IMPORTED_MODULE_21__validators_birthdat_validator_directive__["a" /* BirthdatValidatorDirective */],
             __WEBPACK_IMPORTED_MODULE_22__pipes_search_pipe__["a" /* SearchPipe */],
-            __WEBPACK_IMPORTED_MODULE_23__create_letter_create_letter_component__["a" /* CreateLetterComponent */],
-            __WEBPACK_IMPORTED_MODULE_24__users_user_create_user_create_component__["a" /* UserCreateComponent */],
-            __WEBPACK_IMPORTED_MODULE_25__users_users_component__["a" /* UsersComponent */],
+            __WEBPACK_IMPORTED_MODULE_23__box_box_list_create_letter_create_letter_component__["a" /* CreateLetterComponent */],
+            __WEBPACK_IMPORTED_MODULE_24__box_users_user_create_user_create_component__["a" /* UserCreateComponent */],
+            __WEBPACK_IMPORTED_MODULE_25__box_users_users_component__["a" /* UsersComponent */],
+            __WEBPACK_IMPORTED_MODULE_31__box_navigate_navigate_component__["a" /* NavigateComponent */],
+            __WEBPACK_IMPORTED_MODULE_33__box_user_navigate_user_navigate_component__["a" /* UserNavigateComponent */],
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -281,8 +289,9 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_8__angular_common_http__["b" /* HttpClientModule */],
             __WEBPACK_IMPORTED_MODULE_3_ngx_bootstrap_dropdown__["a" /* BsDropdownModule */].forRoot(),
             __WEBPACK_IMPORTED_MODULE_10__angular_router__["c" /* RouterModule */].forRoot(appRoutes),
+            __WEBPACK_IMPORTED_MODULE_32__ng_bootstrap_ng_bootstrap__["b" /* NgbModule */].forRoot(),
             __WEBPACK_IMPORTED_MODULE_17__angular_forms__["b" /* FormsModule */],
-            __WEBPACK_IMPORTED_MODULE_17__angular_forms__["d" /* ReactiveFormsModule */]
+            __WEBPACK_IMPORTED_MODULE_17__angular_forms__["e" /* ReactiveFormsModule */]
         ],
         providers: [
             __WEBPACK_IMPORTED_MODULE_7__services_users_service__["a" /* UsersService */],
@@ -338,7 +347,14 @@ BirthdatePipe = __decorate([
 
 /***/ }),
 
-/***/ "../../../../../src/app/box/box-list/box-list.component.css":
+/***/ "../../../../../src/app/box/box-list/box-list.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<app-navigation (userSelected)=\"filterLetters($event)\"></app-navigation>\n<div class=\"container right-content\">\n  <div class=\"row\">\n    <div class=\"col-2\">\n      <app-navigate></app-navigate>\n    </div>\n    <div class=\"col-10\">\n      <button class=\"btn btn-control btn-delete\" (click)=\"deleteLetter()\">\n      </button>\n      <table class=\"table table-striped table-letters\">\n        <tbody>\n\n        <tr *ngFor=\"let article of urlResponse | search: searchText; let i = index\" #articleTitle>\n          <td><input class=\"removeItem\" #checked (change)=\"addLetterforRemove(article, $event)\" type=\"checkbox\"></td>\n          <td [routerLink]=\"[article._id]\"\n              routerLinkActive=\"active\"><span class=\"title\">{{article.subject}}</span> <span class=\"body\">{{article.body}}</span></td>\n\n        </tr>\n        <tr> <td colspan=\"2\" *ngIf=\"!urlResponse\">No messages matched your search</td></tr>\n        </tbody>\n      </table>\n    </div>\n  </div>\n</div>\n\n\n\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/box/box-list/box-list.component.sass":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -346,20 +362,13 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".title {\n  padding: 8px 0;\n\n  transition: 0.5s;\n  text-transform: capitalize;\n\n}\n\napp-box-item .title {\n  border-bottom: 1px solid #000;\n  cursor: pointer;\n}\n\napp-box-item .title:hover {\n  color: #42a4ef;\n}\n\napp-box-item {\n  width: 100%;\n}\n.body {\n  color: red;\n}\n\nbody {\n  overflow-y: scroll;\n}\n\n\n\n.loaders {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background: rgba(0, 0, 0, 0.7);\n}\n\n.loader,\n.loader:before,\n.loader:after {\n  background: #ffffff;\n  -webkit-animation: load1 1s infinite ease-in-out;\n  animation: load1 1s infinite ease-in-out;\n  width: 1em;\n  height: 4em;\n}\n.loader {\n  color: #ffffff;\n  text-indent: -9999em;\n  margin: 88px auto;\n  position: absolute;\n  left: 0;\n  right: 0;\n  top: 35%;\n  font-size: 11px;\n  -webkit-transform: translateZ(0);\n  transform: translateZ(0);\n  -webkit-animation-delay: -0.16s;\n  animation-delay: -0.16s;\n}\n.loader:before,\n.loader:after {\n  position: absolute;\n  top: 0;\n  content: '';\n}\n.loader:before {\n  left: -1.5em;\n  -webkit-animation-delay: -0.32s;\n  animation-delay: -0.32s;\n}\n.loader:after {\n  left: 1.5em;\n}\n@-webkit-keyframes load1 {\n  0%,\n  80%,\n  100% {\n    box-shadow: 0 0;\n    height: 4em;\n  }\n  40% {\n    box-shadow: 0 -2em;\n    height: 5em;\n  }\n}\n@keyframes load1 {\n  0%,\n  80%,\n  100% {\n    box-shadow: 0 0;\n    height: 4em;\n  }\n  40% {\n    box-shadow: 0 -2em;\n    height: 5em;\n  }\n}\n\n.removeItem {\n  margin-right: 10px;\n}\n.title {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;-webkit-box-align: center;-ms-flex-align: center;align-items: center;\n}\n\n.body{\n  overflow: hidden;\n  white-space:nowrap;\n  text-overflow: ellipsis;\n  width: 500px;\n}\n.left-content{\n  width: 300px;\n}\n.right-content{\n  width: 743px;\n}\n", ""]);
+exports.push([module.i, ".table-letters {\n  margin: 20px 0;\n  font-size: 14px; }\n  .table-letters tr {\n    cursor: pointer;\n    transition: all 0.5s; }\n    .table-letters tr:hover {\n      background: #fdf9f9; }\n  .table-letters .body {\n    margin-left: 60px;\n    overflow: hidden;\n    white-space: nowrap;\n    text-overflow: ellipsis;\n    max-width: 300px;\n    display: inline-block;\n    vertical-align: middle; }\n  .table-letters .title {\n    min-width: 200px;\n    display: inline-block;\n    vertical-align: middle; }\n", ""]);
 
 // exports
 
 
 /*** EXPORTS FROM exports-loader ***/
 module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/box/box-list/box-list.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"container right-content\">\n  <div class=\"row\">\n    <div class=\"col-12 search-form\">\n      <div class=\"form-group\">\n        <input class=\"form-control\" type=\"text\" placeholder=\"Search\" [(ngModel)]=\"searchText\"\n        />\n      </div>\n    </div>\n  </div>\n  <h1 class=\"remove-sub\" *ngIf=\"subject\">Letter was removed</h1>\n  <div class=\"row\" *ngIf=\"urlResponse\">\n    <div class=\"remove-letters btn\" (click)=\"deleteLetter()\">Remove Letter</div>\n    <div class=\"col-12\" *ngFor=\"let article of urlResponse | search: searchText; let i = index\"\n         #articleTitle>\n\n      <div class=\"title\"\n      >\n        <input class=\"removeItem\" #checked (change)=\"addLetterforRemove(article, $event)\" type=\"checkbox\">\n        <div class=\"inner-title\" [routerLink]=\"[article._id]\"\n             routerLinkActive=\"active\">\n          <div>{{article.subject}}</div>\n          <div class=\"body\">{{article.body}}</div>\n\n        </div>\n      </div>\n\n    </div>\n  </div>\n  <div class=\"loaders\" *ngIf=\"loader\">\n    <div class=\"loader\">Loading...</div>\n  </div>\n\n</div>\n\n\n\n"
 
 /***/ }),
 
@@ -396,6 +405,9 @@ var BoxListComponent = (function () {
             _this.loader = true;
         });
     }
+    BoxListComponent.prototype.filterLetters = function (text) {
+        this.searchText = text;
+    };
     BoxListComponent.prototype.getLetterList = function () {
         var _this = this;
         this.lettersService.getLetters(this.urlRoute).subscribe(function (response) {
@@ -434,15 +446,11 @@ var BoxListComponent = (function () {
     };
     return BoxListComponent;
 }());
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* ViewChild */])('articleTitle'),
-    __metadata("design:type", Object)
-], BoxListComponent.prototype, "articleTitle", void 0);
 BoxListComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'app-box-item',
         template: __webpack_require__("../../../../../src/app/box/box-list/box-list.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/box/box-list/box-list.component.css")],
+        styles: [__webpack_require__("../../../../../src/app/box/box-list/box-list.component.sass")],
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__services_letters_service__["a" /* LettersService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_letters_service__["a" /* LettersService */]) === "function" && _b || Object])
 ], BoxListComponent);
@@ -452,7 +460,14 @@ var _a, _b;
 
 /***/ }),
 
-/***/ "../../../../../src/app/box/box-list/letter/letter.component.css":
+/***/ "../../../../../src/app/box/box-list/create-letter/create-letter.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<app-navigation></app-navigation>\n<div class=\"container right-content\">\n  <div class=\"row\">\n    <div class=\"col-2\">\n      <app-navigate></app-navigate>\n    </div>\n    <div class=\"col-10\">\n      <ng-template #popup let-c=\"close\" let-d=\"dismiss\">\n        <div class=\"modal-footer\">\n          <button type=\"button\" class=\"btn btn-outline-dark\" (click)=\"c('Close click')\"></button>\n        </div>\n        <div class=\"modal-body\">\n          <p>Letter was sent</p>\n        </div>\n      </ng-template>\n\n      <form class=\"form-add-user\" [formGroup]=\"addLetterForm\" (keyup.enter)=\"sendLetter(addLetterForm)\" (submit)=\"sendLetter(addLetterForm)\" [ngClass]=\"{invalidForm: FormInvalid}\">\n        <div class=\"name-wrapper\">\n          <div class=\"form-group\">\n            <input  type=\"text\" placeholder=\"Email\" formControlName=\"to\" class=\"form-control\" [(ngModel)]=\"query\" (keyup)=filter()>\n\n            <div class=\"autocomplete\" *ngIf=\"userEmailList.length\">\n              <ul>\n                <li *ngFor=\"let item of userEmailList\">\n                  <a (click)=\"selectFromAutocomplete(item.email)\">{{item.email}}</a>\n                </li>\n              </ul>\n            </div>\n            <div class=\"error-mess\"\n                 *ngIf=\"!addLetterForm.controls.to.valid && !addLetterForm.controls.to.pristine\">\n              {{\"It is required\"}}\n            </div>\n          </div>\n          <div class=\"form-group\">\n            <input class=\"form-control\" formControlName=\"subject\" placeholder=\"subject\">\n            <div class=\"error-mess\"\n                 *ngIf=\"!addLetterForm.controls.subject.valid && !addLetterForm.controls.subject.pristine\">\n              {{\"It is required\"}}\n            </div>\n          </div>\n          <div class=\"form-group\">\n            <textarea class=\"form-control\" formControlName=\"body\" placeholder=\"body\"></textarea>\n            <div class=\"error-mess\"\n                 *ngIf=\"!addLetterForm.controls.body.valid && !addLetterForm.controls.body.pristine\">\n              {{\"It is required\"}}\n            </div>\n          </div>\n        </div>\n        <div class=\"form-group\">\n          <button class=\"btn\">Submit</button>\n        </div>\n      </form>\n    </div>\n\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/box/box-list/create-letter/create-letter.component.sass":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -460,7 +475,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".title {\n  font-size: 42px;\n  text-transform: capitalize;\n  line-height: 1.3;\n  padding-top: 30px;\n}\n\n.body {\n  color: grey;\n}\n\n.container {\n  width: auto;\n}\n\n.loaders {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background: rgba(0, 0, 0, 0.7);\n}\n\n.loader,\n.loader:before,\n.loader:after {\n  background: #ffffff;\n  -webkit-animation: load1 1s infinite ease-in-out;\n  animation: load1 1s infinite ease-in-out;\n  width: 1em;\n  height: 4em;\n}\n.loader {\n  color: #ffffff;\n  text-indent: -9999em;\n  margin: 88px auto;\n  position: absolute;\n  left: 0;\n  right: 0;\n  top: 35%;\n  font-size: 11px;\n  -webkit-transform: translateZ(0);\n  transform: translateZ(0);\n  -webkit-animation-delay: -0.16s;\n  animation-delay: -0.16s;\n}\n.loader:before,\n.loader:after {\n  position: absolute;\n  top: 0;\n  content: '';\n}\n.loader:before {\n  left: -1.5em;\n  -webkit-animation-delay: -0.32s;\n  animation-delay: -0.32s;\n}\n.loader:after {\n  left: 1.5em;\n}\n@-webkit-keyframes load1 {\n  0%,\n  80%,\n  100% {\n    box-shadow: 0 0;\n    height: 4em;\n  }\n  40% {\n    box-shadow: 0 -2em;\n    height: 5em;\n  }\n}\n@keyframes load1 {\n  0%,\n  80%,\n  100% {\n    box-shadow: 0 0;\n    height: 4em;\n  }\n  40% {\n    box-shadow: 0 -2em;\n    height: 5em;\n  }\n}\n", ""]);
+exports.push([module.i, ".form-add-user .form-group {\n  position: relative; }\n\n.popup div {\n  cursor: pointer; }\n\n.autocomplete {\n  position: absolute;\n  top: 100%;\n  left: 0;\n  z-index: 1000;\n  float: left;\n  min-width: 160px;\n  width: 100%;\n  padding: 4px 0;\n  margin: 2px 0 0 0;\n  list-style: none;\n  background-color: #ffffff;\n  border-color: #ccc;\n  border-color: rgba(0, 0, 0, 0.2);\n  border-style: solid;\n  border-width: 1px;\n  border-radius: 5px;\n  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);\n  background-clip: padding-box; }\n\n.autocomplete ul {\n  list-style: none;\n  padding: 0; }\n\n.autocomplete ul a {\n  padding: 4px 20px;\n  display: block;\n  transition: all 0.5s;\n  cursor: pointer; }\n\n.autocomplete ul a:hover {\n  background: grey;\n  color: #fff; }\n", ""]);
 
 // exports
 
@@ -470,10 +485,182 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
+/***/ "../../../../../src/app/box/box-list/create-letter/create-letter.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CreateLetterComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_users_service__ = __webpack_require__("../../../../../src/app/services/users.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_letters_service__ = __webpack_require__("../../../../../src/app/services/letters.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__reactive_validators_email_validator__ = __webpack_require__("../../../../../src/app/reactive-validators/email-validator.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ng_bootstrap_ng_bootstrap__ = __webpack_require__("../../../../@ng-bootstrap/ng-bootstrap/index.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var CreateLetterComponent = (function () {
+    function CreateLetterComponent(formBuilder, lettersService, usersService, modalService, myElement) {
+        this.formBuilder = formBuilder;
+        this.lettersService = lettersService;
+        this.usersService = usersService;
+        this.modalService = modalService;
+        this.FormInvalid = false;
+        this.letter = [];
+        this.letterSent = false;
+        this.query = '';
+        this.userEmailList = [];
+        this.AdduserEmail = [];
+        this.elementRef = myElement;
+    }
+    CreateLetterComponent.prototype.open = function (popup) {
+        var _this = this;
+        console.log(popup);
+        this.modalService.open(popup).result.then(function (result) {
+            _this.closeResult = "Closed with: " + result;
+        }, function (reason) {
+        });
+    };
+    CreateLetterComponent.prototype.mongoObjectId = function () {
+        var timestamp = (new Date().getTime() / 1000 | 0).toString(16);
+        return timestamp + 'xxxxxxxxxxxxxxxx'.replace(/[x]/g, function () {
+            return (Math.random() * 16 | 0).toString(16);
+        }).toLowerCase();
+    };
+    ;
+    // user email autocomplete
+    CreateLetterComponent.prototype.filter = function () {
+        var _this = this;
+        if (this.query !== "") {
+            this.userEmailList = this.createUserList.filter(function (el) {
+                return el.email.toLowerCase().includes(_this.query.toLowerCase());
+            });
+        }
+        else {
+            this.userEmailList = [];
+        }
+    };
+    // select user email from autocomplete
+    CreateLetterComponent.prototype.selectFromAutocomplete = function (item) {
+        this.query = item;
+        this.userEmailList = [];
+    };
+    CreateLetterComponent.prototype.postNewEmailUser = function (data) {
+        this.usersService.postUsers(data).subscribe(function () {
+        }, function (err) {
+            console.log("Error " + err.status + " " + err.statusText);
+        }, function () {
+            console.log('Done');
+        });
+    };
+    CreateLetterComponent.prototype.addNewUSerEmail = function (form) {
+        this.AdduserEmail = this.createUserList.filter(function (email) {
+            return form.controls.to.value === email.email;
+        });
+        if (this.AdduserEmail.length === 0) {
+            this.AdduserEmail.push({
+                email: form.controls.to.value,
+                fullName: 'No name',
+            });
+            this.wrapperdataUser = {
+                users: this.AdduserEmail
+            };
+            this.postNewEmailUser(this.wrapperdataUser);
+        }
+    };
+    CreateLetterComponent.prototype.sendLetter = function (form) {
+        var _this = this;
+        if (form.valid) {
+            this.letter = this.letter.concat([form.value]);
+            this.letter[0].mailbox = this.mongoObjectId();
+            this.FormInvalid = false;
+            this.addNewUSerEmail(form);
+            this.addLetterForm.reset();
+            this.lettersWrapp = {
+                letters: this.letter,
+            };
+            this.lettersService.postLetter(this.lettersWrapp).subscribe(function () {
+            }, function (err) {
+                console.log("Error " + err.status + " " + err.statusText);
+            }, function () {
+                console.log('Done');
+                _this.open(_this.popup);
+                _this.letter = [];
+                _this.AdduserEmail = [];
+            });
+        }
+        else {
+            this.FormInvalid = true;
+        }
+    };
+    CreateLetterComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.usersService.getUsers().subscribe(function (userslist) {
+            _this.createUserList = userslist;
+        });
+        this.addLetterForm = this.formBuilder.group({
+            to: [null, [__WEBPACK_IMPORTED_MODULE_4__reactive_validators_email_validator__["a" /* emailValidator */], __WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* Validators */].required]],
+            subject: [null, [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* Validators */].required]],
+            body: [null, [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* Validators */].required]],
+            mailbox: [this.mongoObjectId()],
+        });
+    };
+    CreateLetterComponent.prototype.ngOnChanges = function () {
+    };
+    return CreateLetterComponent;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* ViewChild */])('popup'),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* ElementRef */]) === "function" && _a || Object)
+], CreateLetterComponent.prototype, "popup", void 0);
+CreateLetterComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'app-create-letter',
+        template: __webpack_require__("../../../../../src/app/box/box-list/create-letter/create-letter.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/box/box-list/create-letter/create-letter.component.sass")],
+    }),
+    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_letters_service__["a" /* LettersService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_letters_service__["a" /* LettersService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__services_users_service__["a" /* UsersService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_users_service__["a" /* UsersService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__ng_bootstrap_ng_bootstrap__["a" /* NgbModal */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__ng_bootstrap_ng_bootstrap__["a" /* NgbModal */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* ElementRef */]) === "function" && _f || Object])
+], CreateLetterComponent);
+
+var _a, _b, _c, _d, _e, _f;
+//# sourceMappingURL=create-letter.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/box/box-list/letter/letter.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div class=\"row\">\n   <div class=\"col-12\">\n     <h1 class=\"remove-sub\" *ngIf=\"subject\">The Letter was removed</h1>\n     <div class=\"title\"><b>Email:</b> {{oneLetterShow.to}}</div>\n     <div class=\"body\"><b>Subject:</b> {{oneLetterShow.subject}}</div>\n     <div class=\"body\"><b>Body:</b> {{oneLetterShow.body}}</div>\n   </div>\n    <div class=\"remove btn\" (click)=\"removeLetter(oneLetterShow._id)\">Remove</div>\n  </div>\n</div>\n\n<div class=\"loaders\" *ngIf=\"loader\">\n  <div class=\"loader\">Loading...</div>\n</div>\n"
+module.exports = "<app-navigation></app-navigation>\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-2\">\n      <app-navigate></app-navigate>\n    </div>\n   <div class=\"col-10\">\n     <button type=\"button\" class=\"btn btn-control btn-delete\" (click)=\"removeLetter(oneLetterShow._id)\"></button>\n     <div class=\"email\">{{oneLetterShow.to}}</div>\n     <h1 class=\"body\">{{oneLetterShow.subject}}</h1>\n     <div class=\"body\">{{oneLetterShow.body}}</div>\n   </div>\n\n  </div>\n</div>\n\n<div class=\"loaders\" *ngIf=\"loader\">\n  <div class=\"loader\">Loading...</div>\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/box/box-list/letter/letter.component.sass":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".email {\n  font-size: 18px;\n  padding: 20px 0 30px; }\n\nh1 {\n  font-size: 22px; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
 
 /***/ }),
 
@@ -538,7 +725,7 @@ LetterComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'app-letter',
         template: __webpack_require__("../../../../../src/app/box/box-list/letter/letter.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/box/box-list/letter/letter.component.css")]
+        styles: [__webpack_require__("../../../../../src/app/box/box-list/letter/letter.component.sass")]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_letters_service__["a" /* LettersService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_letters_service__["a" /* LettersService */]) === "function" && _c || Object])
 ], LetterComponent);
@@ -556,7 +743,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "app-box {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  padding-top: 30px;\n  max-width: 1100px;\n  margin: 0 auto;\n}\nheader {\n  background: black;\n  height: 100px;\n  width: 100%;\n}\n\nh1 {\n  font-size: 32px;\n  text-align: center;\n  color: #fff;\n  padding: 20px 0;\n}\n.wrapper {\n  background: #d1ecf1;\n  margin-right: 50px;\n}\n\n.menu {\n  border: 1px solid #d1ecf1;\n  min-width: 300px;\n}\n.row > a {\n  display: block;\n  background: #d1ecf1;\n  color: #000;\n  border-bottom: 1px solid #d1ecf1;\n  padding: 10px 0;\n  text-align: center;\n  text-transform: capitalize;\n  font-size: 19px;\n  cursor: pointer;\n  transition: 0.5s;\n}\n\n.row > a:hover,\n.row > a.active {\n  color: #fff;\n  background: #000;\n  text-decoration: none;\n}\n\nbody {\n  overflow-y: scroll;\n}\n\n.search-form{\n  padding: 0;\n  margin: 20px 0 0;\n}\n", ""]);
+exports.push([module.i, "app-box {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  padding-top: 30px;\n  max-width: 1100px;\n  margin: 0 auto;\n}\nheader {\n  background: black;\n  height: 100px;\n  width: 100%;\n}\n\nh1 {\n  font-size: 32px;\n  text-align: center;\n  padding: 20px 0;\n}\n.wrapper {\n  background: #d1ecf1;\n  margin-right: 50px;\n}\n\n.menu {\n  border: 1px solid #d1ecf1;\n  min-width: 300px;\n}\n.row > a {\n  display: block;\n  background: #d1ecf1;\n  color: #000;\n  border-bottom: 1px solid #d1ecf1;\n  padding: 10px 0;\n  text-align: center;\n  text-transform: capitalize;\n  font-size: 19px;\n  cursor: pointer;\n  transition: 0.5s;\n}\n\n.row > a:hover,\n.row > a.active {\n  color: #fff;\n  background: #000;\n  text-decoration: none;\n}\n\nbody {\n  overflow-y: scroll;\n}\n\n.search-form{\n  padding: 0;\n  margin: 20px 0 0;\n}\n", ""]);
 
 // exports
 
@@ -569,7 +756,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/box/box.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n\n<div class=\"wrapper left-content\">\n  <div class=\"container \">\n    <div class=\"row\">\n      <div class=\"col-md-12 alert alert-info\">\n        <div *ngFor=\"let user of users\">\n          Users:  {{user.firstName}} {{user.lastName}}\n        </div>\n        <p><a class=\"btn\" (click)=\"loginOut()\">Logout</a></p>\n      </div>\n    </div>\n    <div class=\"row menu\">\n      <a class=\"col-12\" routerLink=\"/users/users-list\" routerLinkActive=\"active\">users</a>\n      <a class=\"col-12 active\" routerLink=\"/box/inbox\" routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact:\ntrue}\">box</a>\n      <a class=\"col-12\" routerLink=\"create-letter\" routerLinkActive=\"active\">Create letter</a>\n      <a class=\"col-12\" routerLink=\"inbox\" routerLinkActive=\"active\">inbox</a>\n      <a class=\"col-12\" routerLink=\"sent-letters\" routerLinkActive=\"active\">sent</a>\n      <a class=\"col-12\" routerLink=\"draft-letters\" routerLinkActive=\"active\">draft</a>\n      <a class=\"col-12\" routerLink=\"spam-letters\" routerLinkActive=\"active\">spam</a>\n    </div>\n\n  </div>\n</div>\n\n\n<router-outlet></router-outlet>\n"
+module.exports = "<router-outlet></router-outlet>\n\n\n\n\n"
 
 /***/ }),
 
@@ -579,9 +766,6 @@ module.exports = "\n\n<div class=\"wrapper left-content\">\n  <div class=\"conta
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BoxComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_userLogin_service__ = __webpack_require__("../../../../../src/app/services/userLogin.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_authentication_service__ = __webpack_require__("../../../../../src/app/services/authentication.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -592,28 +776,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-
-
-
 var BoxComponent = (function () {
-    function BoxComponent(userService, authenticationService, router) {
-        this.userService = userService;
-        this.authenticationService = authenticationService;
-        this.router = router;
-        this.users = [];
+    function BoxComponent() {
     }
     BoxComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        // get users from secure api end point
-        this.userService.getUsers()
-            .subscribe(function (users) {
-            _this.users = users;
-        });
-    };
-    BoxComponent.prototype.loginOut = function () {
-        this.users = [];
-        this.authenticationService.logout();
-        this.router.navigate(['/login']);
     };
     return BoxComponent;
 }());
@@ -622,17 +788,22 @@ BoxComponent = __decorate([
         selector: 'app-box',
         template: __webpack_require__("../../../../../src/app/box/box.component.html"),
         styles: [__webpack_require__("../../../../../src/app/box/box.component.css")],
-        encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["_19" /* ViewEncapsulation */].None,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_userLogin_service__["a" /* UserLoginService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_userLogin_service__["a" /* UserLoginService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_authentication_service__["a" /* AuthenticationService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_authentication_service__["a" /* AuthenticationService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [])
 ], BoxComponent);
 
-var _a, _b, _c;
 //# sourceMappingURL=box.component.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/create-letter/create-letter.component.css":
+/***/ "../../../../../src/app/box/navigate/navigate.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<nav class=\"main-menu\" >\n  <ul>\n    <li><a class=\"create-letter\" routerLink=\"/box/create-letter\" routerLinkActive=\"active\">Compose</a></li>\n    <li><a routerLink=\"/box/inbox\" routerLinkActive=\"active\">inbox</a></li>\n    <li><a routerLink=\"/box/sent-letters\" routerLinkActive=\"active\">sent</a></li>\n    <li><a routerLink=\"/box/spam-letters\" routerLinkActive=\"active\">spam</a></li>\n  </ul>\n</nav>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/box/navigate/navigate.component.sass":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -640,7 +811,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "h1 {\n  color: black;\n}\n\n.left-content {\n  width: 300px;\n}\n\n.right-content {\n  width: 743px;\n}\n\n.form-add-user {\n  width: 100%;\n}\n\n\n.popup {\n  box-shadow: -1px 3px 8px 3px grey;\n  padding: 0 0 0 10px;\n  position: absolute;\n  left: 0;\n  bottom: -48px;\n  width: 100%;\n  z-index: 1;\n  background: #fff;\n}\n\n.form-add-user .form-group {\n  position: relative;\n\n}\n\n.popup div {\n  cursor: pointer;\n}\n\n\n.autocomplete{\n  position: absolute;\n  top: 100%;\n  left: 0;\n  z-index: 1000;\n  float: left;\n  min-width: 160px;\n  width: 100%;\n  padding: 4px 0;\n  margin: 2px 0 0 0;\n  list-style: none;\n  background-color: #ffffff;\n  border-color: #ccc;\n  border-color: rgba(0, 0, 0, 0.2);\n  border-style: solid;\n  border-width: 1px;\n  border-radius: 5px;\n  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);\n  background-clip: padding-box;\n}\n\n.autocomplete ul {\n  list-style: none;\n  padding: 0;\n}\n\n.autocomplete ul a {\n  padding: 4px 20px;\n  display: block;\n  transition: all 0.5s;\n  cursor: pointer;\n}\n\n.autocomplete ul a:hover {\n  background: grey;\n  color: #fff;\n}\n", ""]);
+exports.push([module.i, ".main-menu ul {\n  list-style: none;\n  padding: 0; }\n\n.main-menu a {\n  color: #000;\n  margin-bottom: 10px;\n  transition: color 0.5s; }\n  .main-menu a:hover {\n    color: #d14836; }\n\n.main-menu .active {\n  color: #d14836; }\n\n.create-letter {\n  color: #fff !important;\n  background-color: #d9534f;\n  border: 1px solid #d43f3a;\n  border-radius: 2px;\n  padding: 4px 18px;\n  cursor: pointer;\n  display: inline-block;\n  text-align: center;\n  font-size: 12px;\n  text-decoration: none;\n  transition: all 0.5s;\n  margin-bottom: 5px;\n  text-transform: uppercase; }\n  .create-letter:hover {\n    opacity: 0.8; }\n", ""]);
 
 // exports
 
@@ -650,22 +821,137 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ "../../../../../src/app/create-letter/create-letter.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"container right-content\">\n  <div class=\"row\">\n    <div class=\"col-12\">\n      <h1>Create Letter</h1>\n    </div>\n  </div>\n  <div class=\"row\">\n    <div *ngIf=\"letterSent\">Letter was sent</div>\n    <form class=\"form-add-user\" [formGroup]=\"addLetterForm\" (keyup.enter)=\"sendLetter(addLetterForm)\" (submit)=\"sendLetter(addLetterForm)\" [ngClass]=\"{invalidForm: FormInvalid}\">\n      <div class=\"name-wrapper\">\n        <div class=\"form-group\">\n\n\n              <input  type=\"text\" placeholder=\"Email\" formControlName=\"to\" class=\"form-control\" [(ngModel)]=\"query\" (keyup)=filter()>\n\n            <div class=\"autocomplete\" *ngIf=\"userEmailList.length\">\n              <ul>\n                <li *ngFor=\"let item of userEmailList\">\n                  <a (click)=\"selectFromAutocomplete(item.email)\">{{item.email}}</a>\n                </li>\n              </ul>\n            </div>\n          <div class=\"error-mess\"\n               *ngIf=\"!addLetterForm.controls.to.valid && !addLetterForm.controls.to.pristine\">\n            {{\"It is required\"}}\n          </div>\n        </div>\n        <div class=\"form-group\">\n          <input class=\"form-control\" formControlName=\"subject\" placeholder=\"subject\">\n          <div class=\"error-mess\"\n               *ngIf=\"!addLetterForm.controls.subject.valid && !addLetterForm.controls.subject.pristine\">\n            {{\"It is required\"}}\n          </div>\n        </div>\n        <div class=\"form-group\">\n          <textarea class=\"form-control\" formControlName=\"body\" placeholder=\"body\"></textarea>\n          <div class=\"error-mess\"\n               *ngIf=\"!addLetterForm.controls.body.valid && !addLetterForm.controls.body.pristine\">\n            {{\"It is required\"}}\n          </div>\n        </div>\n      </div>\n      <div class=\"form-group\">\n        <button class=\"btn\">Submit</button>\n      </div>\n    </form>\n\n  </div>\n</div>\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/create-letter/create-letter.component.ts":
+/***/ "../../../../../src/app/box/navigate/navigate.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CreateLetterComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NavigateComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var NavigateComponent = (function () {
+    function NavigateComponent() {
+    }
+    NavigateComponent.prototype.ngOnInit = function () {
+    };
+    return NavigateComponent;
+}());
+NavigateComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'app-navigate',
+        template: __webpack_require__("../../../../../src/app/box/navigate/navigate.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/box/navigate/navigate.component.sass")]
+    }),
+    __metadata("design:paramtypes", [])
+], NavigateComponent);
+
+//# sourceMappingURL=navigate.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/box/user-navigate/user-navigate.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<nav class=\"main-menu\" >\n  <ul>\n    <li><a class=\"create-letter\" routerLink=\"/users/create-user\" routerLinkActive=\"active\">Compose</a></li>\n    <li><a routerLink=\"/users/users-list\" routerLinkActive=\"active\">User List</a></li>\n  </ul>\n</nav>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/box/user-navigate/user-navigate.component.sass":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".main-menu ul {\n  list-style: none;\n  padding: 0; }\n\n.main-menu a {\n  color: #000;\n  margin-bottom: 10px;\n  transition: color 0.5s; }\n  .main-menu a:hover {\n    color: #d14836; }\n\n.main-menu .active {\n  color: #d14836; }\n\n.create-letter {\n  color: #fff !important;\n  background-color: #d9534f;\n  border: 1px solid #d43f3a;\n  border-radius: 2px;\n  padding: 4px 18px;\n  cursor: pointer;\n  display: inline-block;\n  text-align: center;\n  font-size: 12px;\n  text-decoration: none;\n  transition: all 0.5s;\n  margin-bottom: 5px;\n  text-transform: uppercase; }\n  .create-letter:hover {\n    opacity: 0.8; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/box/user-navigate/user-navigate.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserNavigateComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var UserNavigateComponent = (function () {
+    function UserNavigateComponent() {
+    }
+    UserNavigateComponent.prototype.ngOnInit = function () {
+    };
+    return UserNavigateComponent;
+}());
+UserNavigateComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'app-user-navigate',
+        template: __webpack_require__("../../../../../src/app/box/user-navigate/user-navigate.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/box/user-navigate/user-navigate.component.sass")]
+    }),
+    __metadata("design:paramtypes", [])
+], UserNavigateComponent);
+
+//# sourceMappingURL=user-navigate.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/box/users/user-create/user-create.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/box/users/user-create/user-create.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<app-navigation></app-navigation>\n<div class=\"container\">\n  <div class=\"row\" >\n    <div class=\"col-2\">\n      <app-user-navigate></app-user-navigate>\n    </div>\n    <div class=\"col-10\" *ngIf=\"renameDataUser\">\n      <form class=\"form-add-user\" [formGroup]=\"addUserForm\" (submit)=\"putRenameUser(addUserForm)\"\n            [ngClass]=\"{invalidForm: FormInvalid}\">\n        <div class=\"name-wrapper\">\n          <div class=\"form-group\">\n            <input class=\"form-control\" formControlName=\"fullName\" placeholder=\"First name\">\n            <div class=\"error-mess\"\n                 *ngIf=\"!addUserForm.controls.fullName.valid && !addUserForm.controls.fullName.pristine\">\n              {{\"To short\"}}\n            </div>\n          </div>\n        </div>\n        <div class=\"form-group\">\n          <input class=\"form-control\" type=\"date\" formControlName=\"birthdate\" placeholder=\"1991-03-22\">\n          <div class=\"error-mess\"\n               *ngIf=\"!addUserForm.controls.birthdate.valid && !addUserForm.controls.birthdate.pristine\">\n            {{\"It is required\"}}\n          </div>\n        </div>\n        <div class=\"form-group\">\n          <input class=\"form-control\" formControlName=\"email\" placeholder=\"Your email\">\n          <div class=\"error-mess\" *ngIf=\"!addUserForm.controls.email.valid && !addUserForm.controls.email.pristine\">\n            {{\"Email not valid\"}}\n          </div>\n        </div>\n        <div class=\"form-group\">\n          <button class=\"btn\">Save</button>\n        </div>\n      </form>\n\n    </div>\n    <div class=\"col-10\" *ngIf=\"!renameDataUser\">\n      <form class=\"form-add-user\" [formGroup]=\"addUserForm\" (submit)=\"addUser(addUserForm)\"\n            [ngClass]=\"{invalidForm: FormInvalid}\">\n        <div class=\"name-wrapper\">\n          <div class=\"form-group\">\n            <input class=\"form-control\" formControlName=\"fullName\" placeholder=\"First name\">\n            <div class=\"error-mess\"\n                 *ngIf=\"!addUserForm.controls.fullName.valid && !addUserForm.controls.fullName.pristine\">\n              {{\"To short\"}}\n            </div>\n          </div>\n        </div>\n        <div class=\"form-group\">\n          <input class=\"form-control\" type=\"date\" formControlName=\"birthdate\" placeholder=\"1991-03-22\">\n          <div class=\"error-mess\"\n               *ngIf=\"!addUserForm.controls.birthdate.valid && !addUserForm.controls.birthdate.pristine\">\n            {{\"It is required\"}}\n          </div>\n        </div>\n        <div class=\"form-group\">\n          <input class=\"form-control\" formControlName=\"email\" placeholder=\"Your email\">\n\n          <div class=\"error-mess\" *ngIf=\"!addUserForm.controls.email.valid && !addUserForm.controls.email.pristine\">\n            {{\"Email not valid\"}}\n          </div>\n        </div>\n        <div class=\"form-group\">\n          <button class=\"btn\">Submit</button>\n        </div>\n      </form>\n\n    </div>\n  </div>\n\n</div>\n\n\n<div class=\"loaders\" *ngIf=\"loader\">\n  <div class=\"loader\">Loading...</div>\n</div>\n\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/box/users/user-create/user-create.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserCreateComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_users_service__ = __webpack_require__("../../../../../src/app/services/users.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_letters_service__ = __webpack_require__("../../../../../src/app/services/letters.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__reactive_validators_email_validator__ = __webpack_require__("../../../../../src/app/reactive-validators/email-validator.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -681,118 +967,338 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var CreateLetterComponent = (function () {
-    function CreateLetterComponent(formBuilder, lettersService, usersService, myElement) {
-        this.formBuilder = formBuilder;
-        this.lettersService = lettersService;
-        this.usersService = usersService;
-        this.FormInvalid = false;
-        this.letter = [];
-        this.letterSent = false;
-        this.query = '';
-        this.userEmailList = [];
-        this.AdduserEmail = [];
-        this.elementRef = myElement;
-    }
-    CreateLetterComponent.prototype.mongoObjectId = function () {
-        var timestamp = (new Date().getTime() / 1000 | 0).toString(16);
-        return timestamp + 'xxxxxxxxxxxxxxxx'.replace(/[x]/g, function () {
-            return (Math.random() * 16 | 0).toString(16);
-        }).toLowerCase();
-    };
-    ;
-    // user email autocomplete
-    CreateLetterComponent.prototype.filter = function () {
+
+var UserCreateComponent = (function () {
+    function UserCreateComponent(userService, formBuilder, routers, router) {
         var _this = this;
-        if (this.query !== "") {
-            this.userEmailList = this.createUserList.filter(function (el) {
-                return el.email.toLowerCase().includes(_this.query.toLowerCase());
-            });
-        }
-        else {
-            this.userEmailList = [];
-        }
-    };
-    // select user email from autocomplete
-    CreateLetterComponent.prototype.selectFromAutocomplete = function (item) {
-        this.query = item;
-        this.userEmailList = [];
-    };
-    CreateLetterComponent.prototype.postNewEmailUser = function (data) {
-        this.usersService.postUsers(data).subscribe(function () {
+        this.userService = userService;
+        this.formBuilder = formBuilder;
+        this.routers = routers;
+        this.router = router;
+        this.FormInvalid = false;
+        this.dataUser = [];
+        this.loader = false;
+        this.EMAIL_REGEXP = '/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i';
+        this.router.params.subscribe(function (params) { return _this.userId = params; });
+    }
+    UserCreateComponent.prototype.postUser = function () {
+        var _this = this;
+        this.userService.postUsers(this.wrapperdataUser).subscribe(function () {
         }, function (err) {
             console.log("Error " + err.status + " " + err.statusText);
         }, function () {
             console.log('Done');
+            _this.routers.navigate(['/users/users-list']);
         });
     };
-    CreateLetterComponent.prototype.addNewUSerEmail = function (form) {
-        this.AdduserEmail = this.createUserList.filter(function (email) {
-            return form.controls.to.value === email.email;
-        });
-        if (this.AdduserEmail.length === 0) {
-            this.AdduserEmail.push({
-                email: form.controls.to.value,
-                fullName: 'No name',
-            });
-            this.wrapperdataUser = {
-                users: this.AdduserEmail
-            };
-            this.postNewEmailUser(this.wrapperdataUser);
-        }
-    };
-    CreateLetterComponent.prototype.sendLetter = function (form) {
+    UserCreateComponent.prototype.renameUser = function () {
         var _this = this;
+        this.userService.renameUser(this.userId.id, this.dataUser[0]).subscribe(function () {
+        }, function (err) {
+            console.log("Error " + err.status + " " + err.statusText);
+        }, function () {
+            console.log('Done');
+            _this.routers.navigate(["/users/users-list/" + _this.userId.id]);
+        });
+    };
+    UserCreateComponent.prototype.addUser = function (form) {
+        console.log(form);
         if (form.valid) {
-            this.letter = this.letter.concat([form.value]);
-            this.letter[0].mailbox = this.mongoObjectId();
+            this.loader = true;
             this.FormInvalid = false;
-            this.addNewUSerEmail(form);
-            this.addLetterForm.reset();
-            this.lettersWrapp = {
-                letters: this.letter,
+            this.dataUser = this.dataUser.concat(form.value);
+            this.addUserForm.reset();
+            this.wrapperdataUser = {
+                users: this.dataUser
             };
-            this.lettersService.postLetter(this.lettersWrapp).subscribe(function () {
-            }, function (err) {
-                console.log("Error " + err.status + " " + err.statusText);
-            }, function () {
-                console.log('Done');
-                _this.letterSent = true;
-                _this.letter = [];
-                _this.AdduserEmail = [];
-            });
+            this.postUser();
         }
         else {
             this.FormInvalid = true;
         }
     };
-    CreateLetterComponent.prototype.ngOnInit = function () {
+    UserCreateComponent.prototype.putRenameUser = function (form) {
+        if (form.valid) {
+            this.loader = true;
+            this.FormInvalid = false;
+            this.dataUser = this.dataUser.concat(form.value);
+            this.renameUser();
+        }
+    };
+    UserCreateComponent.prototype.changeDateFormat = function (date) {
+        if (this.renameDataUser.birthdate) {
+            var dateFormat = new Date(date);
+            return dateFormat.getFullYear() + '-' + (dateFormat.getMonth() + 1) + '-' + dateFormat.getDate();
+        }
+        else {
+            return date;
+        }
+    };
+    UserCreateComponent.prototype.isEmpty = function (obj) {
         var _this = this;
-        this.usersService.getUsers().subscribe(function (userslist) {
-            _this.createUserList = userslist;
-        });
-        this.addLetterForm = this.formBuilder.group({
-            to: [null, [__WEBPACK_IMPORTED_MODULE_4__reactive_validators_email_validator__["a" /* emailValidator */], __WEBPACK_IMPORTED_MODULE_1__angular_forms__["e" /* Validators */].required]],
-            subject: [null, [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["e" /* Validators */].required]],
-            body: [null, [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["e" /* Validators */].required]],
-            mailbox: [this.mongoObjectId()],
+        for (var prop in obj) {
+            if (obj.hasOwnProperty(prop)) {
+                this.userService.getOneUser(this.userId.id).subscribe(function (res) {
+                    _this.renameDataUser = res;
+                    _this.addUserForm = _this.formBuilder.group({
+                        fullName: [_this.renameDataUser.fullName, [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* Validators */].minLength(2), __WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* Validators */].required]],
+                        email: [_this.renameDataUser.email, [__WEBPACK_IMPORTED_MODULE_4__reactive_validators_email_validator__["a" /* emailValidator */], __WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* Validators */].required]],
+                        birthdate: [_this.changeDateFormat(_this.renameDataUser.birthdate), []],
+                    });
+                });
+            }
+        }
+    };
+    UserCreateComponent.prototype.ngOnInit = function () {
+        this.isEmpty(this.userId);
+        this.addUserForm = this.formBuilder.group({
+            fullName: [null, [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* Validators */].minLength(2), __WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* Validators */].required]],
+            email: [null, [__WEBPACK_IMPORTED_MODULE_4__reactive_validators_email_validator__["a" /* emailValidator */], __WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* Validators */].required]],
+            birthdate: [null, [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["f" /* Validators */].required]]
         });
     };
-    CreateLetterComponent.prototype.ngOnChanges = function () {
-    };
-    return CreateLetterComponent;
+    return UserCreateComponent;
 }());
-CreateLetterComponent = __decorate([
+UserCreateComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-create-letter',
-        template: __webpack_require__("../../../../../src/app/create-letter/create-letter.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/create-letter/create-letter.component.css")],
+        selector: 'app-user-create',
+        template: __webpack_require__("../../../../../src/app/box/users/user-create/user-create.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/box/users/user-create/user-create.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_letters_service__["a" /* LettersService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_letters_service__["a" /* LettersService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_users_service__["a" /* UsersService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_users_service__["a" /* UsersService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* ElementRef */]) === "function" && _d || Object])
-], CreateLetterComponent);
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_users_service__["a" /* UsersService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_users_service__["a" /* UsersService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */]) === "function" && _d || Object])
+], UserCreateComponent);
 
 var _a, _b, _c, _d;
-//# sourceMappingURL=create-letter.component.js.map
+//# sourceMappingURL=user-create.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/box/users/users-list/user/user.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "body {\n  font-family: Arial;\n}\n\n.wrapper {\n  overflow: hidden;\n}\n\n.description {\n  font-size: 17px;\n  color: grey;\n  margin: 5px 0;\n  line-height: 1.3;\n\n}\n.wrapper {\n  margin-right: 0 !important;\n}\n.name {\n  font-size: 21px;\n}\n\n.item {\n  padding: 20px;\n  margin-bottom: 10px;\n  cursor: pointer;\n}\n\n\n.users-list {\n  width: 470px;\n  margin: 50px auto ;\n  list-style: none;\n}\n\n.active {\n  background: sandybrown;\n\n}\n\n.active,\n.active .description{\n  color: #fff;\n}\n\nbutton {\n  padding: 0;\n  cursor: pointer;\n  text-decoration: underline;\n}\n\nbutton:hover {\n  text-decoration: none;\n}\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/box/users/users-list/user/user.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<app-navigation></app-navigation>\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-2\">\n      <app-user-navigate></app-user-navigate>\n    </div>\n    <div class=\"col-10\">\n      <div>\n        <div class=\"name\">{{oneUser?.fullName}}</div>\n        <div class=\"description\">{{oneUser?.email}}</div>\n        <div class=\"birthdate\" *ngIf=\"oneUser.birthdate\">{{oneUser?.birthdate | birthdate}}</div>\n        <button class=\"btn\" [routerLink]=\"['/users/rename-user/', oneUser._id]\">Change Info</button>\n        <button class=\"btn\" (click)=\"removeUser(oneUser._id)\">Remove</button>\n      </div>\n    </div>\n  </div>\n</div>\n\n<div class=\"loaders\" *ngIf=\"loader\">\n  <div class=\"loader\">Loading...</div>\n</div>\n\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/box/users/users-list/user/user.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_users_service__ = __webpack_require__("../../../../../src/app/services/users.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var UserComponent = (function () {
+    function UserComponent(userService, routers, router) {
+        var _this = this;
+        this.userService = userService;
+        this.routers = routers;
+        this.router = router;
+        this.oneUser = [];
+        this.loader = false;
+        this.router.params.subscribe(function (params) {
+            console.log(_this.userId = params);
+        });
+    }
+    UserComponent.prototype.removeUser = function (userId) {
+        var _this = this;
+        this.loader = true;
+        this.userService.removeUser(userId).subscribe(function () {
+        }, function (err) {
+            console.log("Error " + err.status + " " + err.statusText);
+        }, function () {
+            _this.routers.navigate(['/users/users-list']);
+        });
+    };
+    UserComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.loader = true;
+        this.userService.getOneUser(this.userId.id).subscribe(function (response) {
+            _this.oneUser = response;
+            _this.loader = false;
+        }, function (err) {
+            console.log("Error " + err.status + " " + err.statusText);
+        });
+    };
+    return UserComponent;
+}());
+UserComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'app-user',
+        template: __webpack_require__("../../../../../src/app/box/users/users-list/user/user.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/box/users/users-list/user/user.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_users_service__["a" /* UsersService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_users_service__["a" /* UsersService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */]) === "function" && _c || Object])
+], UserComponent);
+
+var _a, _b, _c;
+//# sourceMappingURL=user.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/box/users/users-list/users-list.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".name {\n  cursor: pointer;\n}\n\n.name span {\n  display: inline-block;\n  min-width: 50px;\n  margin-right: 10px;\n}\nul {\n  list-style: none;\n}\ninput.ng-dirty.ng-invalid,\nselect.ng-dirty.ng-invalid {\n  border: 1px solid red;\n}\n\n\n.form-add-user {\n  max-width: 500px;\n  margin: 50px auto 0;\n}\n\n.error-mess {\n  color: red;\n  text-transform: uppercase;\n  padding: 10px;\n  font-weight: bold;\n}\n\n.invalidForm input.ng-invalid,\n.invalidForm select.ng-invalid{\n  border: 1px solid red;\n}\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/box/users/users-list/users-list.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<app-navigation></app-navigation>\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-2\">\n      <app-user-navigate></app-user-navigate>\n    </div>\n    <div class=\"col-10\">\n      <table class=\"table table-striped table-letters\">\n        <tbody class=\"users-list\">\n        <tr class=\"item\" *ngFor=\"let item of data\">\n          <td class=\"wrapper-cont\" [routerLink]=\"[item._id]\">\n            <div class=\"name\"><span>{{item?.fullName}}</span> <{{item?.email}}></div>\n          </td>\n        </tr>\n        </tbody>\n      </table>\n    </div>\n  </div>\n</div>\n\n\n<div class=\"loaders\" *ngIf=\"loader\">\n  <div class=\"loader\">Loading...</div>\n</div>\n\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/box/users/users-list/users-list.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UsersListComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_users_service__ = __webpack_require__("../../../../../src/app/services/users.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var UsersListComponent = (function () {
+    function UsersListComponent(userService) {
+        this.userService = userService;
+        this.loader = false;
+    }
+    UsersListComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.loader = true;
+        this.userService.getUsers().subscribe(function (response) {
+            _this.data = response;
+            _this.loader = false;
+        }, function (err) {
+            console.log("Error " + err.status + " " + err.statusText);
+        });
+    };
+    return UsersListComponent;
+}());
+UsersListComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'app-users-list',
+        template: __webpack_require__("../../../../../src/app/box/users/users-list/users-list.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/box/users/users-list/users-list.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_users_service__["a" /* UsersService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_users_service__["a" /* UsersService */]) === "function" && _a || Object])
+], UsersListComponent);
+
+var _a;
+//# sourceMappingURL=users-list.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/box/users/users.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".wrapper {\n  margin-right: 0 !important;\n}\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/box/users/users.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<router-outlet></router-outlet>\n\n\n\n\n\n\n\n\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/box/users/users.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UsersComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var UsersComponent = (function () {
+    function UsersComponent() {
+    }
+    UsersComponent.prototype.ngOnInit = function () {
+    };
+    return UsersComponent;
+}());
+UsersComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'app-users',
+        template: __webpack_require__("../../../../../src/app/box/users/users.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/box/users/users.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], UsersComponent);
+
+//# sourceMappingURL=users.component.js.map
 
 /***/ }),
 
@@ -936,8 +1442,8 @@ var LoginComponent = (function () {
     }
     LoginComponent.prototype.ngOnInit = function () {
         this.loginForm = this.formBuilder.group({
-            username: [null, [__WEBPACK_IMPORTED_MODULE_3__angular_forms__["e" /* Validators */].required]],
-            password: [null, [__WEBPACK_IMPORTED_MODULE_3__angular_forms__["e" /* Validators */].required]],
+            username: [null, [__WEBPACK_IMPORTED_MODULE_3__angular_forms__["f" /* Validators */].required]],
+            password: [null, [__WEBPACK_IMPORTED_MODULE_3__angular_forms__["f" /* Validators */].required]],
         });
     };
     LoginComponent.prototype.login = function () {
@@ -969,7 +1475,14 @@ var _a, _b, _c;
 
 /***/ }),
 
-/***/ "../../../../../src/app/navigation/navigation.component.css":
+/***/ "../../../../../src/app/navigation/navigation.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<header id=\"header\">\n  <div class=\"container\">\n    <div class=\"row justify-content-between align-items-center\">\n      <div class=\"col-2 left-block\">\n        <button  [routerLink]=\"['/users/users-list']\" routerLinkActive=\"active\">Users</button>\n        <button  [routerLink]=\"['/box/inbox']\" routerLinkActive=\"active\">Box</button>\n\n      </div>\n      <div class=\"form-group col-7 search-block\">\n        <input class=\"form-control\" type=\"text\" placeholder=\"Search\" (keyup)=\"selectUser(searchText)\" [(ngModel)]=\"searchText\"/>\n        <button type=\"button\">Search</button>\n      </div>\n      <div class=\"col-3 user-info d-flex align-items-center justify-content-center\">\n        <div *ngFor=\"let user of users\">\n          {{user.firstName}} {{user.lastName}}\n        </div>\n        <div><a (click)=\"loginOut()\">Logout</a></div>\n      </div>\n    </div>\n  </div>\n</header>\n\n<router-outlet></router-outlet>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/navigation/navigation.component.sass":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -977,20 +1490,13 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "\nheader {\n  background: black;\n  height: 100px;\n  width: 100%;\n}\n\nh1 {\n  font-size: 32px;\n  text-align: center;\n  color: #fff;\n  padding: 20px 0;\n}\n.wrapper {\n  background: #d1ecf1;\n  margin-bottom: 30px;\n}\n.row > a {\n  display: block;\n  background: #d1ecf1;\n  color: #000;\n  border-bottom: 1px solid #d1ecf1;\n  padding: 10px 0;\n  text-align: center;\n  text-transform: capitalize;\n  font-size: 19px;\n  cursor: pointer;\n  transition: 0.5s;\n}\n\n.row > a:hover,\n.row > a.active {\n  color: #000;\n  background: #fff;\n}\n\nbody {\n  overflow-y: scroll;\n}\n", ""]);
+exports.push([module.i, "#header {\n  padding: 15px 0;\n  margin-bottom: 15px;\n  background: #f1f1f1; }\n  #header .form-group {\n    margin-bottom: 0; }\n\n.search-block {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center; }\n  .search-block input {\n    border-top-right-radius: 0;\n    border-bottom-right-radius: 0; }\n  .search-block button {\n    background-color: #4285f4;\n    color: #fff;\n    display: inline-block;\n    padding: 8px 14px;\n    margin-bottom: 0;\n    font-size: 14px;\n    font-weight: 400;\n    line-height: 1.42857143;\n    text-align: center;\n    white-space: nowrap;\n    vertical-align: middle;\n    -ms-touch-action: manipulation;\n    touch-action: manipulation;\n    cursor: pointer;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none;\n    background-image: none;\n    border: 1px solid transparent;\n    border-radius: 4px;\n    border-top-left-radius: 0;\n    border-bottom-left-radius: 0;\n    transition: all 0.5s; }\n    .search-block button:hover {\n      opacity: 0.8; }\n\n.user-info {\n  font-size: 14px; }\n  .user-info div:first-child {\n    margin-right: 10px; }\n  .user-info div:last-child {\n    text-decoration: underline;\n    cursor: pointer; }\n    .user-info div:last-child:hover {\n      text-decoration: none; }\n\n.left-block button {\n  cursor: pointer; }\n  .left-block button.active {\n    background: #d9534f;\n    color: #fff; }\n", ""]);
 
 // exports
 
 
 /*** EXPORTS FROM exports-loader ***/
 module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/navigation/navigation.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"wrapper\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <a class=\"col-6\" routerLink=\"/users/users-list\" routerLinkActive=\"active\">Users</a>\n      <a class=\"col-6\" routerLink=\"create-user\" routerLinkActive=\"active\">Create users</a>\n      <a class=\"col-6\" routerLink=\"/box/inbox\" routerLinkActive=\"active\">Box</a>\n    </div>\n  </div>\n</div>\n\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -1001,6 +1507,8 @@ module.exports = "<div class=\"wrapper\">\n  <div class=\"container\">\n    <div
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NavigationComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_authentication_service__ = __webpack_require__("../../../../../src/app/services/authentication.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_userLogin_service__ = __webpack_require__("../../../../../src/app/services/userLogin.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1012,24 +1520,53 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
+
 var NavigationComponent = (function () {
-    function NavigationComponent(_router) {
-        this._router = _router;
+    function NavigationComponent(userService, authenticationService, router, myElement) {
+        this.userService = userService;
+        this.authenticationService = authenticationService;
+        this.router = router;
+        this.users = [];
+        this.userSelected = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
+        this.elementRef = myElement;
     }
+    NavigationComponent.prototype.selectUser = function (modal) {
+        this.userSelected.emit(modal);
+    };
     NavigationComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        // get users from secure api end point
+        this.userService.getUsers()
+            .subscribe(function (users) {
+            _this.users = users;
+        });
+    };
+    NavigationComponent.prototype.loginOut = function () {
+        this.users = [];
+        this.authenticationService.logout();
+        this.router.navigate(['/login']);
     };
     return NavigationComponent;
 }());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* ViewChild */])('name1'),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* ElementRef */]) === "function" && _a || Object)
+], NavigationComponent.prototype, "popup", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["T" /* Output */])(),
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]) === "function" && _b || Object)
+], NavigationComponent.prototype, "userSelected", void 0);
 NavigationComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
         selector: 'app-navigation',
         template: __webpack_require__("../../../../../src/app/navigation/navigation.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/navigation/navigation.component.css")]
+        styles: [__webpack_require__("../../../../../src/app/navigation/navigation.component.sass")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_userLogin_service__["a" /* UserLoginService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_userLogin_service__["a" /* UserLoginService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__services_authentication_service__["a" /* AuthenticationService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_authentication_service__["a" /* AuthenticationService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* ElementRef */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* ElementRef */]) === "function" && _f || Object])
 ], NavigationComponent);
 
-var _a;
+var _a, _b, _c, _d, _e, _f;
 //# sourceMappingURL=navigation.component.js.map
 
 /***/ }),
@@ -1167,18 +1704,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var LettersService = (function () {
     function LettersService(_http) {
         this._http = _http;
+        this.url = "https://test-api.javascript.ru/v1/";
     }
     LettersService.prototype.getLetters = function (categoryId) {
-        return this._http.get("https://test-api.javascript.ru/v1/" + categoryId + "/letters");
+        return this._http.get("" + this.url + categoryId + "/letters");
     };
     LettersService.prototype.getOneLetter = function (categoryId, postId) {
-        return this._http.get("https://test-api.javascript.ru/v1/" + categoryId + "/letters/" + postId);
+        return this._http.get("" + this.url + categoryId + "/letters/" + postId);
     };
     LettersService.prototype.postLetter = function (letter) {
-        return this._http.post('https://test-api.javascript.ru/v1/sent-letters', letter);
+        return this._http.post(this.url + "/sent-letters", letter);
     };
     LettersService.prototype.deleteLetter = function (categoryId, postId) {
-        return this._http.delete("https://test-api.javascript.ru/v1/" + categoryId + "/letters/" + postId, { responseType: 'text' });
+        return this._http.delete("" + this.url + categoryId + "/letters/" + postId, { responseType: 'text' });
     };
     return LettersService;
 }());
@@ -1259,21 +1797,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var UsersService = (function () {
     function UsersService(_http) {
         this._http = _http;
+        this.url = "https://test-api.javascript.ru/v1/dimitriyryzhakov/users/";
     }
     UsersService.prototype.getUsers = function () {
-        return this._http.get('https://test-api.javascript.ru/v1/dimitriyryzhakov/users');
+        return this._http.get(this.url);
     };
     UsersService.prototype.getOneUser = function (_id) {
-        return this._http.get('https://test-api.javascript.ru/v1/dimitriyryzhakov/users/' + _id);
+        return this._http.get(this.url + _id);
     };
     UsersService.prototype.postUsers = function (dataUrl) {
         return this._http.post('https://test-api.javascript.ru/v1/dimitriyryzhakov/', dataUrl);
     };
     UsersService.prototype.renameUser = function (id, body) {
-        return this._http.patch("https://test-api.javascript.ru/v1/dimitriyryzhakov/users/" + id, body);
+        return this._http.patch(this.url + id, body);
     };
     UsersService.prototype.removeUser = function (_id) {
-        return this._http.delete('https://test-api.javascript.ru/v1/dimitriyryzhakov/users/' + _id, { responseType: 'text' });
+        return this._http.delete(this.url + _id, { responseType: 'text' });
     };
     return UsersService;
 }());
@@ -1284,388 +1823,6 @@ UsersService = __decorate([
 
 var _a;
 //# sourceMappingURL=users.service.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/users/user-create/user-create.component.css":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/users/user-create/user-create.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"container\">\n  <div class=\"row\" *ngIf=\"renameDataUser\">\n    <div class=\"col-12\">\n      <form class=\"form-add-user\" [formGroup]=\"addUserForm\" (submit)=\"putRenameUser(addUserForm)\"\n            [ngClass]=\"{invalidForm: FormInvalid}\">\n        <div class=\"name-wrapper\">\n          <div class=\"form-group\">\n            <input class=\"form-control\" formControlName=\"fullName\" placeholder=\"First name\">\n            <div class=\"error-mess\"\n                 *ngIf=\"!addUserForm.controls.fullName.valid && !addUserForm.controls.fullName.pristine\">\n              {{\"To short\"}}\n            </div>\n          </div>\n        </div>\n        <div class=\"form-group\">\n          <input class=\"form-control\" type=\"date\" formControlName=\"birthdate\" placeholder=\"1991-03-22\">\n          <div class=\"error-mess\"\n               *ngIf=\"!addUserForm.controls.birthdate.valid && !addUserForm.controls.birthdate.pristine\">\n            {{\"It is required\"}}\n          </div>\n        </div>\n        <div class=\"form-group\">\n          <input class=\"form-control\" formControlName=\"email\" placeholder=\"Your email\">\n          <div class=\"error-mess\" *ngIf=\"!addUserForm.controls.email.valid && !addUserForm.controls.email.pristine\">\n            {{\"Email not valid\"}}\n          </div>\n        </div>\n        <div class=\"form-group\">\n          <button class=\"btn\">Save</button>\n        </div>\n      </form>\n\n    </div>\n  </div>\n\n  <div class=\"row\" *ngIf=\"!renameDataUser\">\n    <div class=\"col-12\">\n      <form class=\"form-add-user\" [formGroup]=\"addUserForm\" (submit)=\"addUser(addUserForm)\"\n            [ngClass]=\"{invalidForm: FormInvalid}\">\n        <div class=\"name-wrapper\">\n          <div class=\"form-group\">\n            <input class=\"form-control\" formControlName=\"fullName\" placeholder=\"First name\">\n            <div class=\"error-mess\"\n                 *ngIf=\"!addUserForm.controls.fullName.valid && !addUserForm.controls.fullName.pristine\">\n              {{\"To short\"}}\n            </div>\n          </div>\n        </div>\n        <div class=\"form-group\">\n          <input class=\"form-control\" type=\"date\" formControlName=\"birthdate\" placeholder=\"1991-03-22\">\n          <div class=\"error-mess\"\n               *ngIf=\"!addUserForm.controls.birthdate.valid && !addUserForm.controls.birthdate.pristine\">\n            {{\"It is required\"}}\n          </div>\n        </div>\n        <div class=\"form-group\">\n          <input class=\"form-control\" formControlName=\"email\" placeholder=\"Your email\">\n\n          <div class=\"error-mess\" *ngIf=\"!addUserForm.controls.email.valid && !addUserForm.controls.email.pristine\">\n            {{\"Email not valid\"}}\n          </div>\n        </div>\n        <div class=\"form-group\">\n          <button class=\"btn\">Submit</button>\n        </div>\n      </form>\n\n    </div>\n  </div>\n</div>\n\n\n<div class=\"loaders\" *ngIf=\"loader\">\n  <div class=\"loader\">Loading...</div>\n</div>\n\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/users/user-create/user-create.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserCreateComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_users_service__ = __webpack_require__("../../../../../src/app/services/users.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__reactive_validators_email_validator__ = __webpack_require__("../../../../../src/app/reactive-validators/email-validator.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-var UserCreateComponent = (function () {
-    function UserCreateComponent(userService, formBuilder, routers, router) {
-        var _this = this;
-        this.userService = userService;
-        this.formBuilder = formBuilder;
-        this.routers = routers;
-        this.router = router;
-        this.FormInvalid = false;
-        this.dataUser = [];
-        this.loader = false;
-        this.EMAIL_REGEXP = '/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i';
-        this.router.params.subscribe(function (params) { return _this.userId = params; });
-    }
-    UserCreateComponent.prototype.postUser = function () {
-        var _this = this;
-        this.userService.postUsers(this.wrapperdataUser).subscribe(function () {
-        }, function (err) {
-            console.log("Error " + err.status + " " + err.statusText);
-        }, function () {
-            console.log('Done');
-            _this.routers.navigate(['/users/users-list']);
-        });
-    };
-    UserCreateComponent.prototype.renameUser = function () {
-        var _this = this;
-        this.userService.renameUser(this.userId.id, this.dataUser[0]).subscribe(function () {
-        }, function (err) {
-            console.log("Error " + err.status + " " + err.statusText);
-        }, function () {
-            console.log('Done');
-            _this.routers.navigate(["/users/users-list/" + _this.userId.id]);
-        });
-    };
-    UserCreateComponent.prototype.addUser = function (form) {
-        console.log(form);
-        if (form.valid) {
-            this.loader = true;
-            this.FormInvalid = false;
-            this.dataUser = this.dataUser.concat(form.value);
-            this.addUserForm.reset();
-            this.wrapperdataUser = {
-                users: this.dataUser
-            };
-            this.postUser();
-        }
-        else {
-            this.FormInvalid = true;
-        }
-    };
-    UserCreateComponent.prototype.putRenameUser = function (form) {
-        if (form.valid) {
-            this.loader = true;
-            this.FormInvalid = false;
-            this.dataUser = this.dataUser.concat(form.value);
-            this.renameUser();
-        }
-    };
-    UserCreateComponent.prototype.changeDateFormat = function (date) {
-        if (this.renameDataUser.birthdate) {
-            var dateFormat = new Date(date);
-            return dateFormat.getFullYear() + '-' + (dateFormat.getMonth() + 1) + '-' + dateFormat.getDate();
-        }
-        else {
-            return date;
-        }
-    };
-    UserCreateComponent.prototype.isEmpty = function (obj) {
-        var _this = this;
-        for (var prop in obj) {
-            if (obj.hasOwnProperty(prop)) {
-                this.userService.getOneUser(this.userId.id).subscribe(function (res) {
-                    _this.renameDataUser = res;
-                    _this.addUserForm = _this.formBuilder.group({
-                        fullName: [_this.renameDataUser.fullName, [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["e" /* Validators */].minLength(2), __WEBPACK_IMPORTED_MODULE_1__angular_forms__["e" /* Validators */].required]],
-                        email: [_this.renameDataUser.email, [__WEBPACK_IMPORTED_MODULE_4__reactive_validators_email_validator__["a" /* emailValidator */], __WEBPACK_IMPORTED_MODULE_1__angular_forms__["e" /* Validators */].required]],
-                        birthdate: [_this.changeDateFormat(_this.renameDataUser.birthdate), []],
-                    });
-                });
-            }
-        }
-    };
-    UserCreateComponent.prototype.ngOnInit = function () {
-        this.isEmpty(this.userId);
-        this.addUserForm = this.formBuilder.group({
-            fullName: [null, [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["e" /* Validators */].minLength(2), __WEBPACK_IMPORTED_MODULE_1__angular_forms__["e" /* Validators */].required]],
-            email: [null, [__WEBPACK_IMPORTED_MODULE_4__reactive_validators_email_validator__["a" /* emailValidator */], __WEBPACK_IMPORTED_MODULE_1__angular_forms__["e" /* Validators */].required]],
-            birthdate: [null, [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["e" /* Validators */].required]]
-        });
-    };
-    return UserCreateComponent;
-}());
-UserCreateComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-user-create',
-        template: __webpack_require__("../../../../../src/app/users/user-create/user-create.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/users/user-create/user-create.component.css")]
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_users_service__["a" /* UsersService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_users_service__["a" /* UsersService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */]) === "function" && _d || Object])
-], UserCreateComponent);
-
-var _a, _b, _c, _d;
-//# sourceMappingURL=user-create.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/users/users-list/user/user.component.css":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "body {\n  font-family: Arial;\n}\n\n.wrapper {\n  overflow: hidden;\n}\n\n.description {\n  font-size: 17px;\n  color: grey;\n  margin: 5px 0;\n  line-height: 1.3;\n\n}\n.wrapper {\n  margin-right: 0 !important;\n}\n.name {\n  font-size: 21px;\n}\n\n.item {\n  padding: 20px;\n  margin-bottom: 10px;\n  cursor: pointer;\n}\n\nbutton {\n  background: black;\n  border: 1px solid #000;\n  color: #fff;\n  font-weight: bold;\n  text-transform: uppercase;\n  border-radius: 20px;\n  display: inline-block;\n  padding: 6px 13px;\n  transition: 0.5s;\n  font-size: 16px;\n  cursor: pointer;\n  margin-top: 5px;\n}\nbutton:hover {\n  opacity: 0.8;\n  background: gainsboro;\n  border-color: gainsboro;\n  color: black;\n\n}\n\nimg {\n  width: 50px;\n  height: 50px;\n  -o-object-fit: cover;\n     object-fit: cover;\n  float: left;\n  margin: 15px 16px 0 0;\n}\n\n.users-list {\n  width: 470px;\n  margin: 50px auto ;\n  list-style: none;\n}\n\n.active {\n  background: sandybrown;\n\n}\n\n.active,\n.active .description{\n  color: #fff;\n}\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/users/users-list/user/user.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-12\">\n      <div>\n        <img [src]=\"oneUser?.avatarUrl\" alt=\"\">\n          <div class=\"name\">{{oneUser?.fullName}}</div>\n          <div class=\"description\">{{oneUser?.email}}</div>\n          <div class=\"birthdate\" *ngIf=\"oneUser.birthdate\">{{oneUser?.birthdate | birthdate}}</div>\n        <button class=\"btn\" (click)=\"removeUser(oneUser._id)\">Remove</button>\n        <button class=\"btn\" [routerLink]=\"['/users/rename-user/', oneUser._id]\">Change Info</button>\n      </div>\n    </div>\n  </div>\n</div>\n\n<div class=\"loaders\" *ngIf=\"loader\">\n  <div class=\"loader\">Loading...</div>\n</div>\n\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/users/users-list/user/user.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_users_service__ = __webpack_require__("../../../../../src/app/services/users.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var UserComponent = (function () {
-    function UserComponent(userService, routers, router) {
-        var _this = this;
-        this.userService = userService;
-        this.routers = routers;
-        this.router = router;
-        this.oneUser = [];
-        this.loader = false;
-        this.router.params.subscribe(function (params) { return _this.userId = params; });
-    }
-    UserComponent.prototype.removeUser = function (userId) {
-        var _this = this;
-        this.loader = true;
-        this.userService.removeUser(userId).subscribe(function () {
-        }, function (err) {
-            console.log("Error " + err.status + " " + err.statusText);
-        }, function () {
-            _this.routers.navigate(['/users/users-list']);
-        });
-    };
-    UserComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.loader = true;
-        this.userService.getOneUser(this.userId.id).subscribe(function (response) {
-            _this.oneUser = response;
-            _this.loader = false;
-        }, function (err) {
-            console.log("Error " + err.status + " " + err.statusText);
-        });
-    };
-    return UserComponent;
-}());
-UserComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-user',
-        template: __webpack_require__("../../../../../src/app/users/users-list/user/user.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/users/users-list/user/user.component.css")]
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_users_service__["a" /* UsersService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_users_service__["a" /* UsersService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */]) === "function" && _c || Object])
-], UserComponent);
-
-var _a, _b, _c;
-//# sourceMappingURL=user.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/users/users-list/users-list.component.css":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "body {\n    font-family: Arial;\n}\n\n.wrapper {\n    overflow: hidden;\n}\n\n.description {\n    font-size: 17px;\n    color: grey;\n    margin: 5px 0;\n    line-height: 1.3;\n\n}\n\n.name {\n    font-size: 21px;\n}\n\n.item {\n    padding: 20px;\n    margin-bottom: 10px;\n    cursor: pointer;\n}\n\nbutton {\n    background: black;\n    border: 1px solid #000;\n    color: #fff;\n    font-weight: bold;\n    text-transform: uppercase;\n    border-radius: 20px;\n    display: inline-block;\n    padding: 6px 13px;\n    transition: 0.5s;\n    font-size: 16px;\n    cursor: pointer;\n    margin-top: 5px;\n}\nbutton:hover {\n    opacity: 0.8;\n    background: gainsboro;\n    border-color: gainsboro;\n    color: black;\n\n}\n\nimg {\n    width: 50px;\n    height: 50px;\n    -o-object-fit: cover;\n       object-fit: cover;\n    float: left;\n    margin: 15px 16px 0 0;\n}\n\n.users-list {\n    width: 470px;\n    margin: 50px auto ;\n    list-style: none;\n}\n.wrapper {\n  margin-right: 0 !important;\n}\n.active {\n    background: sandybrown;\n\n}\n\n.active,\n.active .description{\n    color: #fff;\n}\n\ninput.ng-dirty.ng-invalid,\nselect.ng-dirty.ng-invalid {\n  border: 1px solid red;\n}\n\n\n.form-add-user {\n  max-width: 500px;\n  margin: 50px auto 0;\n}\n\n.error-mess {\n  color: red;\n  text-transform: uppercase;\n  padding: 10px;\n  font-weight: bold;\n}\n\n.invalidForm input.ng-invalid,\n.invalidForm select.ng-invalid{\n  border: 1px solid red;\n}\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/users/users-list/users-list.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ul class=\"users-list\">\n  <li class=\"item\" *ngFor=\"let item of data\">\n    <div>\n      <div class=\"wrapper-cont\" [routerLink]=\"[item._id]\">\n        <div class=\"name\">{{item?.fullName}}</div>\n        <div class=\"name\" *ngIf=\"item.birthdate\">{{item?.birthdate | birthdate}}</div>\n        <div class=\"name\">{{item?.email}}</div>\n      </div>\n    </div>\n  </li>\n</ul>\n\n<div class=\"loaders\" *ngIf=\"loader\">\n  <div class=\"loader\">Loading...</div>\n</div>\n\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/users/users-list/users-list.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UsersListComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_users_service__ = __webpack_require__("../../../../../src/app/services/users.service.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var UsersListComponent = (function () {
-    function UsersListComponent(userService) {
-        this.userService = userService;
-        this.loader = false;
-    }
-    UsersListComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.loader = true;
-        this.userService.getUsers().subscribe(function (response) {
-            _this.data = response;
-            _this.loader = false;
-        }, function (err) {
-            console.log("Error " + err.status + " " + err.statusText);
-        });
-    };
-    return UsersListComponent;
-}());
-UsersListComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-users-list',
-        template: __webpack_require__("../../../../../src/app/users/users-list/users-list.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/users/users-list/users-list.component.css")]
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_users_service__["a" /* UsersService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_users_service__["a" /* UsersService */]) === "function" && _a || Object])
-], UsersListComponent);
-
-var _a;
-//# sourceMappingURL=users-list.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/users/users.component.css":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".wrapper {\n  margin-right: 0 !important;\n}\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/users/users.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<app-navigation></app-navigation>\n"
-
-/***/ }),
-
-/***/ "../../../../../src/app/users/users.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UsersComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var UsersComponent = (function () {
-    function UsersComponent() {
-    }
-    UsersComponent.prototype.ngOnInit = function () {
-    };
-    return UsersComponent;
-}());
-UsersComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-users',
-        template: __webpack_require__("../../../../../src/app/users/users.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/users/users.component.css")]
-    }),
-    __metadata("design:paramtypes", [])
-], UsersComponent);
-
-//# sourceMappingURL=users.component.js.map
 
 /***/ }),
 
