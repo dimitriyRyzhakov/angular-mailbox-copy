@@ -18,7 +18,7 @@ export class NavigationComponent implements OnInit {
   @ViewChild('name1')
   popup: ElementRef;
 
-  @Output() userSelected: EventEmitter<string> = new EventEmitter();
+  @Output() filterLetter: EventEmitter<string> = new EventEmitter();
 
 
   constructor(private userService: UserLoginService,
@@ -30,8 +30,12 @@ export class NavigationComponent implements OnInit {
 
   }
 
-  selectUser(modal){
-    this.userSelected.emit(modal);
+  redirect() {
+    this.router.navigate(['/box/inbox']);  
+  }
+
+  filterTitle(modal){
+    this.filterLetter.emit(modal);
   }
 
   ngOnInit() {

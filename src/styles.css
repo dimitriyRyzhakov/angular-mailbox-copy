@@ -97,6 +97,8 @@ body {
   background: #d9534f;
   color: #fff;
   cursor: pointer;
+  padding: 3px 10px !important;
+  text-decoration: none !important;
 }
 
 .btn-delete {
