@@ -1,6 +1,6 @@
 # AngularEmalBox
 
-Demo https://dimitriyryzhakov.github.io/angular-mailbox-copy/box/spam-letters
+Demo https://dimitriyryzhakov.github.io/angular-mailbox-copy/
 
 Run `npm install`
 
