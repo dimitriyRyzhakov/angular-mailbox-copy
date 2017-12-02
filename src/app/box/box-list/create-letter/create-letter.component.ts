@@ -1,13 +1,14 @@
-import {Component, ElementRef, OnChanges, OnInit} from '@angular/core';
+import {Component, ElementRef, OnChanges, OnInit, ViewChild} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {UsersService} from "../services/users.service";
-import {LettersService} from "../services/letters.service";
-import {emailValidator} from "../reactive-validators/email-validator";
+import {UsersService} from "../../../services/users.service";
+import {LettersService} from "../../../services/letters.service";
+import {emailValidator} from "../../../reactive-validators/email-validator";
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-create-letter',
   templateUrl: './create-letter.component.html',
-  styleUrls: ['./create-letter.component.css'],
+  styleUrls: ['./create-letter.component.sass'],
 })
 export class CreateLetterComponent implements OnInit, OnChanges {
 
@@ -22,15 +23,27 @@ export class CreateLetterComponent implements OnInit, OnChanges {
   public elementRef;
   public AdduserEmail = [];
   public wrapperdataUser;
+  public closeResult: string;
+
+  @ViewChild('popup')
+  popup: ElementRef;
 
   constructor(private formBuilder: FormBuilder,
               private lettersService: LettersService,
               private usersService: UsersService,
+              private modalService: NgbModal,
               myElement: ElementRef) {
     this.elementRef = myElement;
 
   }
 
+  open(popup) {
+    console.log(popup);
+    this.modalService.open(popup).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+    });
+  }
 
   mongoObjectId() {
     let timestamp = (new Date().getTime() / 1000 | 0).toString(16);
@@ -103,7 +116,7 @@ export class CreateLetterComponent implements OnInit, OnChanges {
         console.log(`Error ${err.status} ${err.statusText}`);
       }, () => {
         console.log('Done');
-        this.letterSent = true;
+        this.open(this.popup);
         this.letter = [];
         this.AdduserEmail = [];
       });
@@ -113,7 +126,6 @@ export class CreateLetterComponent implements OnInit, OnChanges {
   }
 
   ngOnInit() {
-
     this.usersService.getUsers().subscribe(userslist => {
       this.createUserList = userslist;
     });

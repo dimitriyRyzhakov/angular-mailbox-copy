@@ -7,23 +7,25 @@ import {Observable} from "rxjs/Observable";
 @Injectable()
 export class LettersService {
 
+  private url = `https://test-api.javascript.ru/v1/`;
+
   constructor(private _http: HttpClient) {
   }
 
   getLetters(categoryId): Observable<Iletters[]> {
-    return this._http.get(`https://test-api.javascript.ru/v1/${categoryId}/letters`);
+    return this._http.get(`${this.url}${categoryId}/letters`);
   }
 
   getOneLetter(categoryId, postId): Observable<Iletter> {
-    return this._http.get(`https://test-api.javascript.ru/v1/${categoryId}/letters/${postId}`);
+    return this._http.get(`${this.url}${categoryId}/letters/${postId}`);
   }
 
   postLetter(letter): Observable<Iletters[]> {
-    return this._http.post('https://test-api.javascript.ru/v1/sent-letters', letter);
+    return this._http.post(`${this.url}/sent-letters`, letter);
   }
 
   deleteLetter(categoryId, postId) {
-    return this._http.delete(`https://test-api.javascript.ru/v1/${categoryId}/letters/${postId}`,
+    return this._http.delete(`${this.url}${categoryId}/letters/${postId}`,
       { responseType: 'text'});
   }
 

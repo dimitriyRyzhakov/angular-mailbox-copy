@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {UsersService} from "../../../services/users.service";
+import {UsersService} from "../../../../services/users.service";
 import {ActivatedRoute, Params} from "@angular/router";
 import {Router} from '@angular/router';
 
@@ -17,7 +17,9 @@ export class UserComponent implements OnInit {
   constructor(private userService: UsersService,
               private routers: Router,
               private router: ActivatedRoute) {
-    this.router.params.subscribe(params => this.userId = params);
+    this.router.params.subscribe(params => {
+      console.log(this.userId = params);
+    });
   }
 
   removeUser(userId) {

@@ -4,8 +4,8 @@ import {NgModule} from '@angular/core';
 import {BaseRequestOptions, HttpModule} from '@angular/http';
 import {BsDropdownModule} from 'ngx-bootstrap/dropdown';
 import {AppComponent} from './app.component';
-import {UsersListComponent} from './users/users-list/users-list.component';
-import {UserComponent} from './users/users-list/user/user.component';
+import {UsersListComponent} from './box/users/users-list/users-list.component';
+import {UserComponent} from './box/users/users-list/user/user.component';
 import {UsersService} from './services/users.service';
 
 import {HttpClientModule} from "@angular/common/http";
@@ -24,15 +24,17 @@ import {EmailValidatorDirective} from './validators/email-validator.directive';
 import {SexValidatorDirective} from './validators/sex-validator.directive';
 import {BirthdatValidatorDirective} from './validators/birthdat-validator.directive';
 import {SearchPipe} from './pipes/search.pipe';
-import {CreateLetterComponent} from "./create-letter/create-letter.component";
-import { UserCreateComponent } from './users/user-create/user-create.component';
-import { UsersComponent } from './users/users.component';
+import {CreateLetterComponent} from "./box/box-list/create-letter/create-letter.component";
+import { UserCreateComponent } from './box/users/user-create/user-create.component';
+import { UsersComponent } from './box/users/users.component';
 import {AuthGuard} from "./guards/auth.guard";
 import {AuthenticationService} from "./services/authentication.service";
 import {UserLoginService} from "./services/userLogin.service";
 import {fakeBackendProvider} from "./fake-backend/fake-backend";
 import {MockBackend} from "@angular/http/testing";
-
+import { NavigateComponent } from './box/navigate/navigate.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { UserNavigateComponent } from './box/user-navigate/user-navigate.component';
 
 const apiKey = '?apiKey=IDfsaUTMyV7Yis-KmKjiO-51QX9RRxvM';
 
@@ -159,6 +161,8 @@ const appRoutes: Routes = [
     CreateLetterComponent,
     UserCreateComponent,
     UsersComponent,
+    NavigateComponent,
+    UserNavigateComponent,
 
   ],
   imports: [
@@ -169,6 +173,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes
     ),
+    NgbModule.forRoot(),
     FormsModule,
     ReactiveFormsModule
   ],

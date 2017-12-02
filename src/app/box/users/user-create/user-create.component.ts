@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {UsersService} from "../../services/users.service";
+import {UsersService} from "../../../services/users.service";
 import {ActivatedRoute, Params} from "@angular/router";
 import {Router} from '@angular/router';
-import {emailValidator} from "../../reactive-validators/email-validator";
+import {emailValidator} from "../../../reactive-validators/email-validator";
 
 @Component({
   selector: 'app-user-create',

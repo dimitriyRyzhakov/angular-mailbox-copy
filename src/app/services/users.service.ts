@@ -8,16 +8,17 @@ import {Iuser} from "../interfaces/iuser";
 @Injectable()
 export class UsersService {
 
+  private url = `https://test-api.javascript.ru/v1/dimitriyryzhakov/users/`;
 
   constructor(private _http: HttpClient) {
   }
 
   getUsers(): Observable<Iusers[]> {
-    return this._http.get('https://test-api.javascript.ru/v1/dimitriyryzhakov/users');
+    return this._http.get(this.url);
   }
 
   getOneUser(_id): Observable<Iuser> {
-    return this._http.get('https://test-api.javascript.ru/v1/dimitriyryzhakov/users/' + _id);
+    return this._http.get(this.url + _id);
   }
 
   postUsers(dataUrl): Observable<Iusers[]> {
@@ -25,11 +26,11 @@ export class UsersService {
   }
 
   renameUser(id, body): Observable<Iuser> {
-    return this._http.patch(`https://test-api.javascript.ru/v1/dimitriyryzhakov/users/${id}`, body);
+    return this._http.patch(this.url + id, body);
   }
 
   removeUser(_id) {
-    return this._http.delete('https://test-api.javascript.ru/v1/dimitriyryzhakov/users/' +  _id,
+    return this._http.delete(this.url +  _id,
         { responseType: 'text'});
   }
 

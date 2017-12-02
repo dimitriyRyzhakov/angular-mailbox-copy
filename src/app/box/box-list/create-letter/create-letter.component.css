@@ -1,0 +1,25 @@
+.form-add-user {
+  width: 100%;
+}
+
+
+.popup {
+  box-shadow: -1px 3px 8px 3px grey;
+  padding: 0 0 0 10px;
+  position: absolute;
+  left: 0;
+  bottom: -48px;
+  width: 100%;
+  z-index: 1;
+  background: #fff;
+}
+
+.form-add-user .form-group {
+  position: relative;
+
+}
+
+.popup div {
+  cursor: pointer;
+}
+

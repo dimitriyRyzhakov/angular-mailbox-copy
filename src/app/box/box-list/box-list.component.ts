@@ -1,4 +1,4 @@
-import {Component, OnChanges, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, OnChanges, OnInit, ViewChild} from '@angular/core';
 import {
   ActivatedRoute, Event as RouterEvent,
 
@@ -8,7 +8,7 @@ import {LettersService} from "../../services/letters.service";
 @Component({
   selector: 'app-box-item',
   templateUrl: './box-list.component.html',
-  styleUrls: ['./box-list.component.css'],
+  styleUrls: ['./box-list.component.sass'],
 
 
 })
@@ -21,7 +21,6 @@ export class BoxListComponent implements OnInit, OnChanges {
   public lettersIdlist: any = [];
   public searchText;
 
-  @ViewChild('articleTitle') articleTitle;
 
 
   constructor(private router: ActivatedRoute, private lettersService: LettersService) {
@@ -31,6 +30,10 @@ export class BoxListComponent implements OnInit, OnChanges {
     });
   }
 
+
+  public filterLetters(text: any): void {
+    this.searchText = text;
+  }
 
   getLetterList() {
     this.lettersService.getLetters(this.urlRoute).subscribe(response => {

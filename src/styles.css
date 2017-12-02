@@ -1,3 +1,7 @@
+body {
+  font-family: Arial,sans-serif;
+}
+
 .loaders {
   position: absolute;
   top: 0;
@@ -83,32 +87,62 @@
   border-color: red;
 }
 
-button {
-  cursor: pointer;
-  color: #fff;
-  transition: 0.5s;
-}
 
-button:hover {
-  background: #000;
-}
 
 .error-mess {
   color: red;
   padding: 5px 10px;
 }
-
-
 .btn {
-  background: gray;
-  color: #fff !important;
+  background: #d9534f;
+  color: #fff;
   cursor: pointer;
 }
-button:hover,
-.btn:hover {
-  background: #000;
+
+.btn-delete {
+  background: #fff url("/assets/img/del.png") no-repeat center;
+  width: 21px;
+  height: 21px;
+  border-color: #000;
+  padding: 12px 31px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.btn-delete:hover {
+  opacity: 0.6;
 }
 
-.remove-sub {
-  color: #000 !important;
+.modal-dialog {
+  text-align: center;
 }
+
+.modal-dialog p {
+  margin: 0;
+  padding: 40px;
+}
+
+.modal-footer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: none;
+  text-indent: -9999px;
+  padding: 0;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  z-index: 9;
+
+}
+.modal-footer button {
+  border: none;
+  cursor: pointer;
+
+}
+.modal-footer button:before {
+  content: 'X';
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 22px;
+}
+

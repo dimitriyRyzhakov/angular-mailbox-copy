@@ -1,0 +1,25 @@
+<app-navigation></app-navigation>
+<div class="container">
+  <div class="row">
+    <div class="col-2">
+      <app-user-navigate></app-user-navigate>
+    </div>
+    <div class="col-10">
+      <table class="table table-striped table-letters">
+        <tbody class="users-list">
+        <tr class="item" *ngFor="let item of data">
+          <td class="wrapper-cont" [routerLink]="[item._id]">
+            <div class="name"><span>{{item?.fullName}}</span> <{{item?.email}}></div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<div class="loaders" *ngIf="loader">
+  <div class="loader">Loading...</div>
+</div>
+

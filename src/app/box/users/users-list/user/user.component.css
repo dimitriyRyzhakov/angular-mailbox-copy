@@ -1,0 +1,54 @@
+body {
+  font-family: Arial;
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+.description {
+  font-size: 17px;
+  color: grey;
+  margin: 5px 0;
+  line-height: 1.3;
+
+}
+.wrapper {
+  margin-right: 0 !important;
+}
+.name {
+  font-size: 21px;
+}
+
+.item {
+  padding: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+
+.users-list {
+  width: 470px;
+  margin: 50px auto ;
+  list-style: none;
+}
+
+.active {
+  background: sandybrown;
+
+}
+
+.active,
+.active .description{
+  color: #fff;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+button:hover {
+  text-decoration: none;
+}

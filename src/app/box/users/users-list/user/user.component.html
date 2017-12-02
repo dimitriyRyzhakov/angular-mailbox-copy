@@ -1,0 +1,22 @@
+<app-navigation></app-navigation>
+<div class="container">
+  <div class="row">
+    <div class="col-2">
+      <app-user-navigate></app-user-navigate>
+    </div>
+    <div class="col-10">
+      <div>
+        <div class="name">{{oneUser?.fullName}}</div>
+        <div class="description">{{oneUser?.email}}</div>
+        <div class="birthdate" *ngIf="oneUser.birthdate">{{oneUser?.birthdate | birthdate}}</div>
+        <button class="btn" [routerLink]="['/users/rename-user/', oneUser._id]">Change Info</button>
+        <button class="btn" (click)="removeUser(oneUser._id)">Remove</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="loaders" *ngIf="loader">
+  <div class="loader">Loading...</div>
+</div>
+

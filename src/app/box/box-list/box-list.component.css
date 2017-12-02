@@ -112,10 +112,21 @@ body {
   white-space:nowrap;
   text-overflow: ellipsis;
   width: 500px;
+  display: inline-block;
+  vertical-align: middle;
 }
 .left-content{
   width: 300px;
 }
 .right-content{
   width: 743px;
+}
+
+
+.table-letters {
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+.table-letters td{
 }
